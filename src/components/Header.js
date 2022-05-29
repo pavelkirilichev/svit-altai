@@ -99,59 +99,151 @@ function Header() {
           </div>
         </nav>
       </div>
-      <div className={"pull-menu" + pullMenu}>
-        <ul className="pull-menu__list">
-          <li
-            className="pull-menu__item"
-            onClick={() => {
-              setCatalogChapter("Спальня");
-            }}
-          >
-            Спальня
-          </li>
-          {catalogChapter == "Спальня" ? (
-            <img
-              src="./images/header/catalog_bedroom.png"
-              className="pull-menu__item__catalog-img"
-            />
-          ) : (
-            ""
-          )}
+      <div className="pull__main">
+        <div className={"pull-menu" + pullMenu}>
+          <ul className="pull-menu__list">
+            <li
+              className="pull-menu__item"
+              onClick={() => {
+                setCatalogChapter("Спальня");
+              }}
+            >
+              Спальня
+            </li>
+            {catalogChapter == "Спальня" ? (
+              <img
+                src="./images/header/catalog_bedroom.png"
+                className="pull-menu__item__catalog-img"
+              />
+            ) : (
+              ""
+            )}
 
-          <li
-            className="pull-menu__item"
-            onClick={() => {
-              setCatalogChapter("Одежда");
-            }}
-          >
-            Одежда и обувь для дома
-          </li>
-          {catalogChapter == "Одежда" ? (
-            <img
-              src="./images/header/catalog_clothes.png"
-              className="pull-menu__item__catalog-img"
-            />
-          ) : (
-            ""
-          )}
+            <li
+              className="pull-menu__item"
+              onClick={() => {
+                setCatalogChapter("Одежда");
+              }}
+            >
+              Одежда и обувь для дома
+            </li>
+            {catalogChapter == "Одежда" ? (
+              <img
+                src="./images/header/catalog_clothes.png"
+                className="pull-menu__item__catalog-img"
+              />
+            ) : (
+              ""
+            )}
 
-          <li
-            className="pull-menu__item"
-            onClick={() => {
-              setCatalogChapter("Кухня");
-            }}
-          >
-            Кухня и интерьер
-          </li>
-          {catalogChapter == "Кухня" ? (
-            <img
-              src="./images/header/catalog_kitchen.png"
-              className="pull-menu__item__catalog-img"
-            />
-          ) : (
-            ""
-          )}
-        </ul>
+            <li
+              className="pull-menu__item"
+              onClick={() => {
+                setCatalogChapter("Кухня");
+              }}
+            >
+              Кухня и интерьер
+            </li>
+            {catalogChapter == "Кухня" ? (
+              <img
+                src="./images/header/catalog_kitchen.png"
+                className="pull-menu__item__catalog-img"
+              />
+            ) : (
+              ""
+            )}
+          </ul>
+        </div>
+        <div className="pull-catalog">
+          <div className="pull-catalog-big">
+            <div
+              className="pull-catalog-big__item"
+              style={{
+                background: "url(./images/header/catalog/bedroom/linen.png)",
+              }}
+            >
+              <span className="pull-catalog-big__item__title">
+                Постельное белье
+              </span>
+            </div>
+            <div
+              className="pull-catalog-big__item"
+              style={{
+                background: "url(./images/header/catalog/bedroom/pillows.png)",
+              }}
+            >
+              <span className="pull-catalog-big__item__title">Подушки</span>
+            </div>
+          </div>
+          <div className="pull-catalog-small">
+            <div
+              className="pull-catalog-small__item"
+              style={{
+                background:
+                  "url(./images/header/catalog/bedroom/children_collection.png)",
+              }}
+            >
+              <span className="pull-catalog-small__item__title">
+                Постельное белье
+              </span>
+            </div>
+            <div
+              className="pull-catalog-small__item"
+              style={{
+                background:
+                  "url(./images/header/catalog/bedroom/children_collection.png)",
+              }}
+            >
+              <span className="pull-catalog-small__item__title">
+                Постельное белье
+              </span>
+            </div>
+            <div
+              className="pull-catalog-small__item"
+              style={{
+                background:
+                  "url(./images/header/catalog/bedroom/children_collection.png)",
+              }}
+            >
+              <span className="pull-catalog-small__item__title">
+                Постельное белье
+              </span>
+            </div>
+            <div
+              className="pull-catalog-small__item"
+              style={{
+                background:
+                  "url(./images/header/catalog/bedroom/children_collection.png)",
+              }}
+            >
+              <span className="pull-catalog-small__item__title">
+                Постельное белье
+              </span>
+            </div>
+            <div
+              className="pull-catalog-small__item"
+              style={{
+                background:
+                  "url(./images/header/catalog/bedroom/children_collection.png)",
+              }}
+            >
+              <span className="pull-catalog-small__item__title">
+                Постельное белье
+              </span>
+            </div>
+            <div
+              className="pull-catalog-small__item"
+              style={{
+                background:
+                  "url(./images/header/catalog/bedroom/children_collection.png)",
+              }}
+            >
+              <span className="pull-catalog-small__item__title">
+                Постельное белье
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="header-mobile">
         <nav className="nav-mobile">
