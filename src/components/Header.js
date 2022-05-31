@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function Header() {
   const [catalogChapter, setCatalogChapter] = useState("");
-  const [pullMenu, setPullMenu] = useState("");
+  const [pull, setPull] = useState("");
   const [pullMenuMob, setPullMenuMob] = useState("");
 
   return (
@@ -50,7 +50,7 @@ function Header() {
                 <div
                   className="nav-bottom__burger"
                   onClick={() => {
-                    setPullMenu(pullMenu == "" ? " pull-menu__active" : "");
+                    setPull(pull == "" ? " pull__active" : "");
                     setCatalogChapter("");
                   }}
                 >
@@ -99,8 +99,8 @@ function Header() {
           </div>
         </nav>
       </div>
-      <div className="pull__main">
-        <div className={"pull-menu" + pullMenu}>
+      <div className={"pull__main" + pull}>
+        <div className="pull-menu">
           <ul className="pull-menu__list">
             <li
               className="pull-menu__item"
