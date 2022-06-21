@@ -1,9 +1,18 @@
+import Catalog from "./Catalog";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
-  const [catalogChapter, setCatalogChapter] = useState("");
-  const [pull, setPull] = useState("");
   const [pullMenuMob, setPullMenuMob] = useState("");
+  const [pull, setPull] = useState("");
+  const [catalogChapter, setCatalogChapter] = useState("");
+  const [catalogMenuImgActive, setCatalogMenuImgActive] = useState("");
+
+  const [catalogMenuImgOne, setCatalogMenuImgOne] = useState("");
+  const [catalogMenuImgTwo, setCatalogMenuImgTwo] = useState("");
+  const [catalogMenuImgThree, setCatalogMenuImgThree] = useState("");
+
+  const [catalogBlurActive, setCatalogBlurActive] = useState("");
 
   return (
     <header className="header">
@@ -51,7 +60,11 @@ function Header() {
                   className="nav-bottom__burger"
                   onClick={() => {
                     setPull(pull == "" ? " pull__active" : "");
+                    setCatalogMenuImgOne("");
+                    setCatalogMenuImgTwo("");
+                    setCatalogMenuImgThree("");
                     setCatalogChapter("");
+                    setCatalogBlurActive("");
                   }}
                 >
                   <img
@@ -86,11 +99,13 @@ function Header() {
                       className="nav-bottom__row-right__icon-img"
                     />
                   </div>
-                  <div className="nav-bottom__row-right__icon">
-                    <img
-                      src="./images/header/cart.png"
-                      className="nav-bottom__row-right__icon-img"
-                    />
+                  <div className="nav-bottom__row-right__icon cart-icon">
+                    <Link to="/cart">
+                      <img
+                        src="./images/header/cart.png"
+                        className="nav-bottom__row-right__icon-img"
+                      />
+                    </Link>
                   </div>
                 </div>
                 <span className="nav-bottom__cart-price">2120₽</span>
@@ -99,152 +114,20 @@ function Header() {
           </div>
         </nav>
       </div>
-      <div className={"pull__main" + pull}>
-        <div className="pull-menu">
-          <ul className="pull-menu__list">
-            <li
-              className="pull-menu__item"
-              onClick={() => {
-                setCatalogChapter("Спальня");
-              }}
-            >
-              Спальня
-            </li>
-            {catalogChapter == "Спальня" ? (
-              <img
-                src="./images/header/catalog_bedroom.png"
-                className="pull-menu__item__catalog-img"
-              />
-            ) : (
-              ""
-            )}
-
-            <li
-              className="pull-menu__item"
-              onClick={() => {
-                setCatalogChapter("Одежда");
-              }}
-            >
-              Одежда и обувь для дома
-            </li>
-            {catalogChapter == "Одежда" ? (
-              <img
-                src="./images/header/catalog_clothes.png"
-                className="pull-menu__item__catalog-img"
-              />
-            ) : (
-              ""
-            )}
-
-            <li
-              className="pull-menu__item"
-              onClick={() => {
-                setCatalogChapter("Кухня");
-              }}
-            >
-              Кухня и интерьер
-            </li>
-            {catalogChapter == "Кухня" ? (
-              <img
-                src="./images/header/catalog_kitchen.png"
-                className="pull-menu__item__catalog-img"
-              />
-            ) : (
-              ""
-            )}
-          </ul>
-        </div>
-        <div className="pull-catalog">
-          <div className="pull-catalog-big">
-            <div
-              className="pull-catalog-big__item"
-              style={{
-                background: "url(./images/header/catalog/bedroom/linen.png)",
-              }}
-            >
-              <span className="pull-catalog-big__item__title">
-                Постельное белье
-              </span>
-            </div>
-            <div
-              className="pull-catalog-big__item"
-              style={{
-                background: "url(./images/header/catalog/bedroom/pillows.png)",
-              }}
-            >
-              <span className="pull-catalog-big__item__title">Подушки</span>
-            </div>
-          </div>
-          <div className="pull-catalog-small">
-            <div
-              className="pull-catalog-small__item"
-              style={{
-                background:
-                  "url(./images/header/catalog/bedroom/children_collection.png)",
-              }}
-            >
-              <span className="pull-catalog-small__item__title">
-                Постельное белье
-              </span>
-            </div>
-            <div
-              className="pull-catalog-small__item"
-              style={{
-                background:
-                  "url(./images/header/catalog/bedroom/children_collection.png)",
-              }}
-            >
-              <span className="pull-catalog-small__item__title">
-                Постельное белье
-              </span>
-            </div>
-            <div
-              className="pull-catalog-small__item"
-              style={{
-                background:
-                  "url(./images/header/catalog/bedroom/children_collection.png)",
-              }}
-            >
-              <span className="pull-catalog-small__item__title">
-                Постельное белье
-              </span>
-            </div>
-            <div
-              className="pull-catalog-small__item"
-              style={{
-                background:
-                  "url(./images/header/catalog/bedroom/children_collection.png)",
-              }}
-            >
-              <span className="pull-catalog-small__item__title">
-                Постельное белье
-              </span>
-            </div>
-            <div
-              className="pull-catalog-small__item"
-              style={{
-                background:
-                  "url(./images/header/catalog/bedroom/children_collection.png)",
-              }}
-            >
-              <span className="pull-catalog-small__item__title">
-                Постельное белье
-              </span>
-            </div>
-            <div
-              className="pull-catalog-small__item"
-              style={{
-                background:
-                  "url(./images/header/catalog/bedroom/children_collection.png)",
-              }}
-            >
-              <span className="pull-catalog-small__item__title">
-                Постельное белье
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Catalog
+        setPull={setPull}
+        pull={pull}
+        setCatalogChapter={setCatalogChapter}
+        catalogChapter={catalogChapter}
+        setCatalogBlurActive={setCatalogBlurActive}
+        catalogBlurActive={catalogBlurActive}
+        catalogMenuImgOne={catalogMenuImgOne}
+        setCatalogMenuImgOne={setCatalogMenuImgOne}
+        catalogMenuImgTwo={catalogMenuImgTwo}
+        setCatalogMenuImgTwo={setCatalogMenuImgTwo}
+        catalogMenuImgThree={catalogMenuImgThree}
+        setCatalogMenuImgThree={setCatalogMenuImgThree}
+      />
       <div className="header-mobile">
         <nav className="nav-mobile">
           <img src="./images/header/logo_mobile.png" />
