@@ -4,8 +4,8 @@ import Footer from "../components/Footer";
 function Home() {
   return (
     <div className="wrapper">
-      <Header />
-      <div className="main"></div>
+      <Header cartPrice={2120} />
+      <div className="home__main"></div>
       <Footer />
     </div>
   );

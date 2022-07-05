@@ -2,7 +2,7 @@ import Catalog from "./Catalog";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Header() {
+function Header({ cartPrice }) {
   const [pullMenuMob, setPullMenuMob] = useState("");
   const [pull, setPull] = useState("");
   const [catalogChapter, setCatalogChapter] = useState("");
@@ -103,12 +103,12 @@ function Header() {
                     <Link to="/cart">
                       <img
                         src="./images/header/cart.png"
-                        className="nav-bottom__row-right__icon-img"
+                        className="nav-bottom__row-right__icon-img cart-icon-img"
                       />
                     </Link>
                   </div>
                 </div>
-                <span className="nav-bottom__cart-price">2120₽</span>
+                <span className="nav-bottom__cart-price">{cartPrice}₽</span>
               </div>
             </div>
           </div>
