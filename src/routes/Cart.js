@@ -105,7 +105,13 @@ function Cart() {
                           src="../images/cart/cart_icon-light.png"
                         />
                       </div>
-                      <div className="cart__main__header__del-cart">
+                      <div
+                        className="cart__main__header__del-cart"
+                        onClick={() => {
+                          setCartPrice(0);
+                          setGoodsState([]);
+                        }}
+                      >
                         <span className="cart__main__header__del-cart__title">
                           Очистить корзину
                         </span>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MoreDetails from "./MoreDetails";
 
 const orders = [
   {
@@ -70,6 +71,7 @@ function Orders() {
           })}
         </ul>
       </div>
+      <MoreDetails />
     </div>
   );
 }
