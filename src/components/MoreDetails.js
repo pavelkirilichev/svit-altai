@@ -1,5 +1,4 @@
 import { useState } from "react";
-import styles from "../module_styles/MoreDetails.css";
 
 const orders = [
   {
@@ -21,7 +20,6 @@ const orders = [
 ];
 
 function MoreDetails() {
-  console.log(styles);
   return <div className="main">тест</div>;
 }
 

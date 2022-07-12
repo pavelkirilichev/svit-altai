@@ -7,7 +7,7 @@
 }
 .order__title {
     margin-left: 20px;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.01em;
@@ -27,7 +27,7 @@
 .order__status__title {
     margin-left: 5%;
     width: 190px;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 24px;
     line-height: 29px;
     color: #545454;
@@ -47,7 +47,7 @@
     height: 25px;
     border: 1px solid #545454;
     border-radius: 20px;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 12px;
     letter-spacing: 0.01em;
     color: #545454;
@@ -66,14 +66,14 @@
     border-radius: 20px;
 }
 .order__itog__info__price__title {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 12px;
     line-height: 15px;
     letter-spacing: 0.01em;
     color: #545454
 }
 .order__itog__info__price__count {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.01em;

@@ -43,7 +43,7 @@
     flex-direction: column;
 }
 .cart__info__main-title {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 17px;
     line-height: 20px;
     letter-spacing: 0.01em;
@@ -51,7 +51,7 @@
 }
 .cart__info__subtitle {
     margin-left: 1px;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 11px;
     line-height: 12px;
     letter-spacing: 0.01em;
@@ -92,9 +92,9 @@ ul {
 .cart__menu__item__title {
     margin-left: 50px;
     color: #545454;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 19.5px;
     letter-spacing: 0.01em;
 }
 .cart__menu__item__div {
@@ -105,9 +105,9 @@ ul {
     margin-left: 50px;
     margin-top: -1px;
     color: #545454;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 10px;
-    line-height: 12px;
+    line-height: 12.19px;
     letter-spacing: 0.01em;
 }
 
@@ -123,7 +123,7 @@ ul {
     justify-content: space-between;
 }
 .cart__main__header__title {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     line-height: 140%;
     color: #545454;
@@ -151,12 +151,13 @@ ul {
 }
 .cart__main__header__order__title {
     font-size: 12px;
+    font-weight: 500;
     line-height: 15px;
     letter-spacing: 0.01em;
     color: #FFFFFF;
 }
 .cart__main__header__order__price-cart {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.01em;
@@ -182,8 +183,8 @@ ul {
     height: 24px;
 }
 .cart__main__header__del-cart__title {
-    font-weight: 700;
-    font-size: 11px;
+    font-weight: 500;
+    font-size: 10px;
     line-height: 12px;
     letter-spacing: 0.01em;
     color: #545454;
@@ -195,7 +196,7 @@ ul {
 }
 .cart__main__header__total__title {
     margin-top: -2.5px;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 12px;
     line-height: 15px;
     letter-spacing: 0.01em;
@@ -203,7 +204,7 @@ ul {
 }
 .cart__main__header__total__count {
     margin-left: 20px;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.01em;
@@ -233,7 +234,7 @@ ul {
     border-radius: 10px;
 }
 .cart__main__content__item__num {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
     line-height: 24px;
     color: #717171;
@@ -256,7 +257,7 @@ ul {
     flex-direction: column;
 }
 .cart__main__content__item__info__title {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.01em;
@@ -269,7 +270,7 @@ ul {
     gap: 10px;
 }
 .cart__main__content__item__info__content p {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 12px;
     line-height: 15px;
     letter-spacing: 0.01em;
@@ -292,12 +293,12 @@ ul {
     flex-direction: column;
 }
 .cart__main__content__item__price-count__title {
-    font-weight: 900;
+    font-weight: 700;
     font-size: 24px;
     color: #545454;
 }
 .cart__main__content__item__price-count__subtitle {
-    filter: blur(0.45px);
+    font-weight: 300;
     margin-top: -3px;
     text-decoration: line-through;
     font-size: 14px;
@@ -306,13 +307,13 @@ ul {
 .cart__main__content__item__count {
     margin-top: 11px;
     margin-left: 13px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
     line-height: 24px;
     color: #DA5C34;
 }
 .cart__main__content__item__count__title {
-    font-size: 11px;
+    font-size: 10px;
 }
 .cart__main__content__item__count-price__bottom {
     margin-top: 10px;
@@ -337,7 +338,7 @@ ul {
 }
 .cart__main__content__item__count-price__bottom-btn-cnt {
     padding: 0 10px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
     line-height: 24px;
     color: #717171;
@@ -356,14 +357,14 @@ ul {
     border-radius: 20px;
 }
 .cart__main__content__item__itog__title {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 12px;
     line-height: 15px;
     letter-spacing: 0.01em;
     color: #545454;
 }
 .cart__main__content__item__itog__count {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     line-height: 15px;
     letter-spacing: 0.01em;
