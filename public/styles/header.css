@@ -148,6 +148,7 @@
     margin-top: 6px;
 }
 .nav-bottom__cart-price {
+    width: 70px;
     margin-left: -5px;
     font-weight: 500;
     font-size: 16px;
@@ -396,7 +397,6 @@
     margin: 0 auto;
     padding-top: 24px;
     background: #F2F4F5;
-    height: calc(100vh - 127px);
 }
 .pull-menu-mobile__active {
     display: block;
@@ -409,7 +409,7 @@
     color: #545454;
     font-size: 24px;
     line-height: 140%;
-    font-weight: 700;
+    font-weight: 500;
 }
 .pull-menu-mobile__list {
     margin-top: -10px;
@@ -418,6 +418,7 @@
     flex-direction: column;
 }
 .pull-menu-mobile__item {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -477,7 +478,15 @@
         min-height: 150vh;
     }
 }
+@media (min-height: 1100px) {
+    .pull-menu {
+        min-height: calc(100vh - 180px);
+    }
+}
 @media (max-width: 1015px) {
+    .cart__main {
+        display: none;
+    }
     .header-mobile {
         display: block;
     }
@@ -490,10 +499,65 @@
     .pull-menu-mobile__active {
         display: block;
     }
-}
-
-@media (min-height: 1100px) {
-    .pull-menu {
-        min-height: calc(100vh - 180px);
+    .pull-menu-mobile__item__inner__list {
+        margin-top: -15px;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding-top: 7px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .catalog-mob__item-active {
+        max-height: 800px;
+        transition: max-height 1s;
+    }
+    .catalog-mob__item-disable {
+        max-height: 0;
+        transition: max-height 0.5s;
+    }
+    .catalog-mob__item-disable-big {
+        max-height: 0;
+        transition: max-height 1s;
+    }
+    .pull-menu-mobile__item__inner {
+        cursor: pointer;
+        box-sizing: border-box;
+        text-align: center;
+        width: 168px;
+        height: 168px;
+        border-radius: 20px;
+        margin-top: 15px;
+    }
+    .pull-menu-mobile__item__inner__title {
+        font-size: 12.8571px;
+        line-height: 16px;
+        color: #545454;
+    }
+    
+    .pull-menu-mobile__item__inner__curtain {
+        border-radius: 20px 20px 20px 20px;
+        width: 100%;
+        height: 27%;
+        background: rgba(255, 255, 255, 0.51);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
+@media (max-width: 375px) {
+    .pull-menu-mobile__item__inner__list {
+        padding: 0 20px;
+        margin-top: -7px;
+        justify-content: center;
+    }
+    .catalog-mob__item-active {
+        max-height: 1600px;
+        transition: max-height 1s;
+    }
+}
+

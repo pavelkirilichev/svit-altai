@@ -11,8 +11,27 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     min-height: 100vh;
 }
 .main {
     flex-grow: 1;
+}
+.home__main {
+    margin-top: 175px;
+    margin-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 50px;
+}
+.footer_mob {
+    opacity: 0;
+}
+@media (max-width: 1015px) {
+    .footer {
+        opacity: 0;
+    }
+    .footer_mob {
+        opacity: 1;
+    }
 }

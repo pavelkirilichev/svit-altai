@@ -20,6 +20,7 @@ const orders = [
   },
 ];
 function Orders() {
+  const [MD, setMD] = useState("");
   return (
     <div className="cart__main__inner">
       <div className="cart__main__header">
@@ -54,7 +55,14 @@ function Orders() {
                 </div>
                 <span className="order__status__title">{order.status}</span>
                 <div className="order__itog__info">
-                  <div className="order__itog__info__more-detail">
+                  <div
+                    className="order__itog__info__more-detail"
+                    onClick={() => {
+                      setTimeout(() => {
+                        setMD(" md_dark-active md_main-active");
+                      }, 100);
+                    }}
+                  >
                     подробнее
                   </div>
                   <div className="order__itog__info__price">
@@ -71,7 +79,7 @@ function Orders() {
           })}
         </ul>
       </div>
-      <MoreDetails />
+      <MoreDetails MD={MD} setMD={setMD} />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Orders from "../components/Orders";
 import { useState } from "react";
+import FooterMob from "../components/FooterMob";
 
 const goods = [
   {
@@ -169,7 +170,6 @@ function Cart() {
                                   </span>
                                 </div>
                                 <span className="cart__main__content__item__count">
-                                  {good.count}
                                   <span className="cart__main__content__item__count__title">
                                     шт
                                   </span>
@@ -177,9 +177,9 @@ function Cart() {
                               </div>
                               <div className="cart__main__content__item__count-price__bottom">
                                 <div
-                                  className="cart__main__content__item__count-price__bottom-btn"
+                                  className="cart__main__content__item__count-price__bottom-btn cart__btn-minus unselectable"
                                   onClick={() => {
-                                    if (good.count != 0) {
+                                    if (good.count != 1) {
                                       good.count -= 1;
 
                                       setGoodsState(
@@ -193,25 +193,27 @@ function Cart() {
                                           }
                                         })
                                       );
-                                      setCartPrice(cartPrice - good.price);
+                                    } else {
+                                      setGoodsState(
+                                        goodsState.filter(
+                                          (good_el) => good_el.id != good.id
+                                        )
+                                      );
                                     }
+                                    setCartPrice(cartPrice - good.price);
                                   }}
-                                >
-                                  <img src="../images/cart/minus_icon.png" />
-                                </div>
-                                <span className="cart__main__content__item__count-price__bottom-btn-cnt">
+                                ></div>
+                                <span className="cart__main__content__item__count-price__bottom-btn-cnt unselectable">
                                   {good.count}
                                 </span>
                                 <div
-                                  className="cart__main__content__item__count-price__bottom-btn"
+                                  className="cart__main__content__item__count-price__bottom-btn cart__btn-plus unselectable"
                                   onClick={() => {
                                     good.count += 1;
-
                                     setGoodsState(
                                       goodsState.map((element) => {
                                         if (element.id == good.id) {
-                                          // объект найден
-                                          return good; // делаем замену
+                                          return good;
                                         } else {
                                           // объект не найде
                                           return element; // возвращаем старый объект
@@ -220,9 +222,7 @@ function Cart() {
                                     );
                                     setCartPrice(cartPrice + good.price);
                                   }}
-                                >
-                                  <img src="../images/cart/plus_icon.png" />
-                                </div>
+                                ></div>
                               </div>
                             </div>
                             <div className="cart__main__content__item__itog">
@@ -262,6 +262,7 @@ function Cart() {
         </div>
       </div>
       <Footer />
+      <FooterMob cartPrice={212000} />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import Catalog from "./Catalog";
+import { catalogBig, catalogSmall } from "./CatalogJSON";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -13,6 +14,10 @@ function Header({ cartPrice }) {
   const [catalogMenuImgThree, setCatalogMenuImgThree] = useState("");
 
   const [catalogBlurActive, setCatalogBlurActive] = useState("");
+
+  const [catalogMenuMobOne, setCatalogMenuMobOne] = useState("");
+  const [catalogMenuMobTwo, setCatalogMenuMobTwo] = useState("");
+  const [catalogMenuMobThree, setCatalogMenuMobThree] = useState("");
 
   return (
     <header className="header">
@@ -143,6 +148,7 @@ function Header({ cartPrice }) {
               setPullMenuMob(
                 pullMenuMob == "" ? " pull-menu-mobile__active" : ""
               );
+              setCatalogChapter("");
             }}
           >
             <img src="./images/header/burger_mobile.png" />
@@ -153,26 +159,152 @@ function Header({ cartPrice }) {
         <div className="pull-menu-mobile__inner">
           <span className="pull-menu-mobile__title">Каталог</span>
           <ul className="pull-menu-mobile__list">
-            <li className="pull-menu-mobile__item">
-              <span>Спальня</span>
-              <img
-                src="./images/header/mobile_arrow.png"
-                className="pull-menu-mobile__item-img"
-              />
+            <li className="pull-menu-mobile__item__container">
+              <div
+                className="pull-menu-mobile__item"
+                onClick={() => {
+                  if (catalogChapter == "bedroom") {
+                    setCatalogMenuMobOne(" catalog-mob__item-disable");
+                    setTimeout(() => {
+                      setCatalogChapter("");
+                    }, 500);
+                  } else {
+                    setCatalogChapter("bedroom");
+                    setCatalogMenuMobTwo(" catalog-mob__item-disable");
+                    setCatalogMenuMobThree(" catalog-mob__item-disable");
+                    setCatalogMenuMobOne(" catalog-mob__item-active");
+                  }
+                }}
+              >
+                <span>Спальня</span>
+                <img
+                  src="./images/header/mobile_arrow.png"
+                  className="pull-menu-mobile__item-img"
+                />
+              </div>
+
+              <div
+                className={
+                  "pull-menu-mobile__item__inner__list" + catalogMenuMobOne
+                }
+              >
+                {catalogSmall
+                  .filter((item) => item.type === catalogChapter)
+                  .map((catalogItem) => {
+                    return (
+                      <div
+                        className="pull-menu-mobile__item__inner"
+                        style={{
+                          background: `url(./images/header/catalog${catalogItem["src"]})`,
+                        }}
+                      >
+                        <div className="pull-menu-mobile__item__inner__curtain">
+                          <span className="pull-menu-mobile__item__inner__title">
+                            {catalogItem["title"]}
+                          </span>
+                        </div>
+                      </div>
+                    );
+                  })}
+              </div>
             </li>
-            <li className="pull-menu-mobile__item">
-              <span>Одежда и обувь для дома</span>
-              <img
-                src="./images/header/mobile_arrow.png"
-                className="pull-menu-mobile__item-img"
-              />
+            <li className="pull-menu-mobile__item__container">
+              <div
+                className="pull-menu-mobile__item"
+                onClick={() => {
+                  if (catalogChapter == "clothes") {
+                    setCatalogMenuMobTwo(" catalog-mob__item-disable");
+                    setTimeout(() => {
+                      setCatalogChapter("");
+                    }, 500);
+                  } else {
+                    setCatalogChapter("clothes");
+                    setCatalogMenuMobOne(" catalog-mob__item-disable");
+                    setCatalogMenuMobThree(" catalog-mob__item-disable");
+                    setCatalogMenuMobTwo(" catalog-mob__item-active");
+                  }
+                }}
+              >
+                <span>Одежда и обувь для дома</span>
+                <img
+                  src="./images/header/mobile_arrow.png"
+                  className="pull-menu-mobile__item-img"
+                />
+              </div>
+
+              <div
+                className={
+                  "pull-menu-mobile__item__inner__list" + catalogMenuMobTwo
+                }
+              >
+                {catalogSmall
+                  .filter((item) => item.type === catalogChapter)
+                  .map((catalogItem) => {
+                    return (
+                      <div
+                        className="pull-menu-mobile__item__inner"
+                        style={{
+                          background: `url(./images/header/catalog${catalogItem["src"]})`,
+                        }}
+                      >
+                        <div className="pull-menu-mobile__item__inner__curtain">
+                          <span className="pull-menu-mobile__item__inner__title">
+                            {catalogItem["title"]}
+                          </span>
+                        </div>
+                      </div>
+                    );
+                  })}
+              </div>
             </li>
-            <li className="pull-menu-mobile__item">
-              <span>Кухня и интерьер</span>
-              <img
-                src="./images/header/mobile_arrow.png"
-                className="pull-menu-mobile__item-img"
-              />
+            <li className="pull-menu-mobile__item__container">
+              <div
+                className="pull-menu-mobile__item"
+                onClick={() => {
+                  if (catalogChapter == "kitchen") {
+                    setCatalogMenuMobThree(" catalog-mob__item-disable");
+                    setTimeout(() => {
+                      setCatalogChapter("");
+                    }, 500);
+                  } else {
+                    setCatalogChapter("kitchen");
+                    setCatalogMenuMobOne(" catalog-mob__item-disable");
+                    setCatalogMenuMobTwo(" catalog-mob__item-disable");
+                    setCatalogMenuMobThree(" catalog-mob__item-active");
+                  }
+                }}
+              >
+                <span>Кухня</span>
+                <img
+                  src="./images/header/mobile_arrow.png"
+                  className="pull-menu-mobile__item-img"
+                />
+              </div>
+
+              <div
+                className={
+                  "pull-menu-mobile__item__inner__list" + catalogMenuMobThree
+                }
+              >
+                {catalogSmall
+                  .filter((item) => item.type === catalogChapter)
+                  .map((catalogItem) => {
+                    return (
+                      <div
+                        className="pull-menu-mobile__item__inner"
+                        style={{
+                          background: `url(./images/header/catalog${catalogItem["src"]})`,
+                        }}
+                      >
+                        <div className="pull-menu-mobile__item__inner__curtain">
+                          <span className="pull-menu-mobile__item__inner__title">
+                            {catalogItem["title"]}
+                          </span>
+                        </div>
+                      </div>
+                    );
+                  })}
+              </div>
             </li>
           </ul>
         </div>
