@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Cart from "./routes/Cart";
 import Good from "./routes/Good";
 import Home from "./routes/Home";
+import LK from "./routes/LK";
 import Tkani from "./routes/Tkani";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -13,6 +14,7 @@ root.render(
       <Route path="/cart" element={<Cart />} />
       <Route path="/tkani" element={<Tkani />} />
       <Route path="/good" element={<Good />} />
+      <Route path="/lk" element={<LK />} />
     </Routes>
   </BrowserRouter>
 );
