@@ -4,6 +4,7 @@ import Cart from "./routes/Cart";
 import Good from "./routes/Good";
 import Home from "./routes/Home";
 import LK from "./routes/LK";
+import MakeOrder from "./routes/MakeOrder";
 import Tkani from "./routes/Tkani";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -15,6 +16,7 @@ root.render(
       <Route path="/tkani" element={<Tkani />} />
       <Route path="/good" element={<Good />} />
       <Route path="/lk" element={<LK />} />
+      <Route path="/mo" element={<MakeOrder />} />
     </Routes>
   </BrowserRouter>
 );
