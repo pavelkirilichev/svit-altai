@@ -1,6 +1,6 @@
 import SidabarFilter from "./SidebarFilter";
 
-function LK_2() {
+function LK_2 ({setChapter}) {
   return (
     <div className="lk-clients__main">
       <div className="lk-clients__sidebar">
@@ -46,7 +46,9 @@ function LK_2() {
                 Отгрузка
               </span>
             </div>
-            <div className="lk-clients__sidebar__menu__item">
+            <div className="lk-clients__sidebar__menu__item" onClick={() => {
+              setChapter(1)
+            }}>
               <img src="../images/lk/users_icon.svg" style={{ marginTop: 3 }} />
               <span className="lk-clients__sidebar__menu__item__title">
                 Клиенты
@@ -89,7 +91,9 @@ function LK_2() {
           </button>
         </div>
         <div className="lk-order__content__main">
-          <div className="lk-order__content__main__item">
+          <div className="lk-order__content__main__item" onClick={() => {
+            setChapter(3)
+          }}>
             <div className="lk-order__content__main__item__top">
               <div className="lk-order__content__item__top__info">
                 <div className="lk-order__content__item__top__subtitle-sec">
@@ -124,112 +128,9 @@ function LK_2() {
               </span>
             </div>
           </div>
-          <div className="lk-order__content__main__item">
-            <div className="lk-order__content__main__item__top">
-              <div className="lk-order__content__item__top__info">
-                <div className="lk-order__content__item__top__subtitle-sec">
-                  <span className="lk-order__content__item__top__subtitle">
-                    ааа-10001200120012
-                  </span>
-                  <span className="lk-order__content__item__top__subtitle">
-                    от 01.01.0001
-                  </span>
-                </div>
-                <span className="lk-order__content__item__top__title">
-                  Наименование фирмы
-                </span>
-              </div>
-              <div className="lk-order__content__item__top__count">
-                <span className="lk-order__content__item__top__count__title">
-                  35 000
-                </span>
-                <span className="lk-order__content__item__top__count__subtitle">
-                  n позиций
-                </span>
-              </div>
-            </div>
-            <div className="lk-order__content__main__item__bottom">
-              <span className="lk-order__content__main__item__bottom__content">
-                Не назначено <span className="lk-order__slash-orange">/</span>{" "}
-                Не назначено
-              </span>
-              <span className="lk-order__content__main__item__bottom__content">
-                Статус <span className="lk-order__slash-orange">/</span> Статус{" "}
-                <span className="lk-order__slash-orange">/</span> Статус
-              </span>
-            </div>
-          </div>
-          <div className="lk-order__content__main__item">
-            <div className="lk-order__content__main__item__top">
-              <div className="lk-order__content__item__top__info">
-                <div className="lk-order__content__item__top__subtitle-sec">
-                  <span className="lk-order__content__item__top__subtitle">
-                    ааа-10001200120012
-                  </span>
-                  <span className="lk-order__content__item__top__subtitle">
-                    от 01.01.0001
-                  </span>
-                </div>
-                <span className="lk-order__content__item__top__title">
-                  Наименование фирмы
-                </span>
-              </div>
-              <div className="lk-order__content__item__top__count">
-                <span className="lk-order__content__item__top__count__title">
-                  35 000
-                </span>
-                <span className="lk-order__content__item__top__count__subtitle">
-                  n позиций
-                </span>
-              </div>
-            </div>
-            <div className="lk-order__content__main__item__bottom">
-              <span className="lk-order__content__main__item__bottom__content">
-                Не назначено <span className="lk-order__slash-orange">/</span>{" "}
-                Не назначено
-              </span>
-              <span className="lk-order__content__main__item__bottom__content">
-                Статус <span className="lk-order__slash-orange">/</span> Статус{" "}
-                <span className="lk-order__slash-orange">/</span> Статус
-              </span>
-            </div>
-          </div>
-          <div className="lk-order__content__main__item">
-            <div className="lk-order__content__main__item__top">
-              <div className="lk-order__content__item__top__info">
-                <div className="lk-order__content__item__top__subtitle-sec">
-                  <span className="lk-order__content__item__top__subtitle">
-                    ааа-10001200120012
-                  </span>
-                  <span className="lk-order__content__item__top__subtitle">
-                    от 01.01.0001
-                  </span>
-                </div>
-                <span className="lk-order__content__item__top__title">
-                  Наименование фирмы
-                </span>
-              </div>
-              <div className="lk-order__content__item__top__count">
-                <span className="lk-order__content__item__top__count__title">
-                  35 000
-                </span>
-                <span className="lk-order__content__item__top__count__subtitle">
-                  n позиций
-                </span>
-              </div>
-            </div>
-            <div className="lk-order__content__main__item__bottom">
-              <span className="lk-order__content__main__item__bottom__content">
-                Не назначено <span className="lk-order__slash-orange">/</span>{" "}
-                Не назначено
-              </span>
-              <span className="lk-order__content__main__item__bottom__content">
-                Статус <span className="lk-order__slash-orange">/</span> Статус{" "}
-                <span className="lk-order__slash-orange">/</span> Статус
-              </span>
-            </div>
-          </div>
-          <div className="lk-order__content__main__item">
+          <div className="lk-order__content__main__item" onClick={() => {
+            setChapter(3)
+          }}>
             <div className="lk-order__content__main__item__top">
               <div className="lk-order__content__item__top__info">
                 <div className="lk-order__content__item__top__subtitle-sec">
