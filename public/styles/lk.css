@@ -147,6 +147,7 @@
     gap: 10px 10px;
 }
 .lk-clients__content__main__item {
+    cursor: pointer;
     box-sizing: border-box;
     padding: 10px;
     display: flex;

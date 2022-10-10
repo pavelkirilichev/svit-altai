@@ -1,5 +1,5 @@
 import Catalog from "./Catalog";
-import { catalogBig, catalogSmall } from "./CatalogJSON";
+import { catalog } from "./CatalogJSON";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -163,16 +163,22 @@ function Header({ cartPrice }) {
               <div
                 className="pull-menu-mobile__item"
                 onClick={() => {
-                  if (catalogChapter == "bedroom") {
-                    setCatalogMenuMobOne(" catalog-mob__item-disable");
+                  if (catalogMenuImgOne == "") {
+                    setCatalogMenuImgTwo(" pull-catalog-disable");
+                    setCatalogMenuImgThree(" pull-catalog-disable");
                     setTimeout(() => {
-                      setCatalogChapter("");
+                      setCatalogMenuImgOne(" pull-catalog-active");
+                    }, 50);
+                    setTimeout(() => {
+                      setCatalogMenuImgTwo("");
+                      setCatalogMenuImgThree("");
+                    }, 500);
+                  } else if (catalogMenuImgOne == " pull-catalog-active") {
+                    setCatalogMenuImgOne(" pull-catalog-disable");
+                    setTimeout(() => {
+                      setCatalogMenuImgOne("");
                     }, 500);
                   } else {
-                    setCatalogChapter("bedroom");
-                    setCatalogMenuMobTwo(" catalog-mob__item-disable");
-                    setCatalogMenuMobThree(" catalog-mob__item-disable");
-                    setCatalogMenuMobOne(" catalog-mob__item-active");
                   }
                 }}
               >
@@ -183,26 +189,13 @@ function Header({ cartPrice }) {
                 />
               </div>
 
-              <div
-                className={
-                  "pull-menu-mobile__item__inner__list" + catalogMenuMobOne
-                }
-              >
-                {catalogSmall
-                  .filter((item) => item.type === catalogChapter)
+              <div className={"pull-catalog__list" + catalogMenuImgOne}>
+                {catalog
+                  .filter((item) => item.type === "bedroom")
                   .map((catalogItem) => {
                     return (
-                      <div
-                        className="pull-menu-mobile__item__inner"
-                        style={{
-                          background: `url(./images/header/catalog${catalogItem["src"]})`,
-                        }}
-                      >
-                        <div className="pull-menu-mobile__item__inner__curtain">
-                          <span className="pull-menu-mobile__item__inner__title">
-                            {catalogItem["title"]}
-                          </span>
-                        </div>
+                      <div className="pull-catalog__item-mobile">
+                        <span>{catalogItem.title}</span>
                       </div>
                     );
                   })}
@@ -212,16 +205,22 @@ function Header({ cartPrice }) {
               <div
                 className="pull-menu-mobile__item"
                 onClick={() => {
-                  if (catalogChapter == "clothes") {
-                    setCatalogMenuMobTwo(" catalog-mob__item-disable");
+                  if (catalogMenuImgTwo == "") {
+                    setCatalogMenuImgOne(" pull-catalog-disable");
+                    setCatalogMenuImgThree(" pull-catalog-disable");
                     setTimeout(() => {
-                      setCatalogChapter("");
+                      setCatalogMenuImgTwo(" pull-catalog-active");
+                    }, 50);
+                    setTimeout(() => {
+                      setCatalogMenuImgOne("");
+                      setCatalogMenuImgThree("");
+                    }, 500);
+                  } else if (catalogMenuImgTwo == " pull-catalog-active") {
+                    setCatalogMenuImgTwo(" pull-catalog-disable");
+                    setTimeout(() => {
+                      setCatalogMenuImgTwo("");
                     }, 500);
                   } else {
-                    setCatalogChapter("clothes");
-                    setCatalogMenuMobOne(" catalog-mob__item-disable");
-                    setCatalogMenuMobThree(" catalog-mob__item-disable");
-                    setCatalogMenuMobTwo(" catalog-mob__item-active");
                   }
                 }}
               >
@@ -232,26 +231,13 @@ function Header({ cartPrice }) {
                 />
               </div>
 
-              <div
-                className={
-                  "pull-menu-mobile__item__inner__list" + catalogMenuMobTwo
-                }
-              >
-                {catalogSmall
-                  .filter((item) => item.type === catalogChapter)
+              <div className={"pull-catalog__list" + catalogMenuImgTwo}>
+                {catalog
+                  .filter((item) => item.type === "clothes")
                   .map((catalogItem) => {
                     return (
-                      <div
-                        className="pull-menu-mobile__item__inner"
-                        style={{
-                          background: `url(./images/header/catalog${catalogItem["src"]})`,
-                        }}
-                      >
-                        <div className="pull-menu-mobile__item__inner__curtain">
-                          <span className="pull-menu-mobile__item__inner__title">
-                            {catalogItem["title"]}
-                          </span>
-                        </div>
+                      <div className="pull-catalog__item-mobile">
+                        <span>{catalogItem.title}</span>
                       </div>
                     );
                   })}
@@ -261,16 +247,22 @@ function Header({ cartPrice }) {
               <div
                 className="pull-menu-mobile__item"
                 onClick={() => {
-                  if (catalogChapter == "kitchen") {
-                    setCatalogMenuMobThree(" catalog-mob__item-disable");
+                  if (catalogMenuImgThree == "") {
+                    setCatalogMenuImgTwo(" pull-catalog-disable");
+                    setCatalogMenuImgOne(" pull-catalog-disable");
                     setTimeout(() => {
-                      setCatalogChapter("");
+                      setCatalogMenuImgThree(" pull-catalog-active");
+                    }, 50);
+                    setTimeout(() => {
+                      setCatalogMenuImgTwo("");
+                      setCatalogMenuImgOne("");
+                    }, 500);
+                  } else if (catalogMenuImgThree == " pull-catalog-active") {
+                    setCatalogMenuImgThree(" pull-catalog-disable");
+                    setTimeout(() => {
+                      setCatalogMenuImgThree("");
                     }, 500);
                   } else {
-                    setCatalogChapter("kitchen");
-                    setCatalogMenuMobOne(" catalog-mob__item-disable");
-                    setCatalogMenuMobTwo(" catalog-mob__item-disable");
-                    setCatalogMenuMobThree(" catalog-mob__item-active");
                   }
                 }}
               >
@@ -281,26 +273,13 @@ function Header({ cartPrice }) {
                 />
               </div>
 
-              <div
-                className={
-                  "pull-menu-mobile__item__inner__list" + catalogMenuMobThree
-                }
-              >
-                {catalogSmall
-                  .filter((item) => item.type === catalogChapter)
+              <div className={"pull-catalog__list" + catalogMenuImgThree}>
+                {catalog
+                  .filter((item) => item.type === "kitchen")
                   .map((catalogItem) => {
                     return (
-                      <div
-                        className="pull-menu-mobile__item__inner"
-                        style={{
-                          background: `url(./images/header/catalog${catalogItem["src"]})`,
-                        }}
-                      >
-                        <div className="pull-menu-mobile__item__inner__curtain">
-                          <span className="pull-menu-mobile__item__inner__title">
-                            {catalogItem["title"]}
-                          </span>
-                        </div>
+                      <div className="pull-catalog__item-mobile">
+                        <span>{catalogItem.title}</span>
                       </div>
                     );
                   })}

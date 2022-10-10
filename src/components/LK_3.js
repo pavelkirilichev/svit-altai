@@ -1,6 +1,6 @@
 import SidabarFilter from "./SidebarFilter";
 
-function LK_3() {
+function LK_3({ setChapter }) {
   return (
     <div className="lk-clients__main">
       <div className="lk-clients__sidebar lk__side__big">
@@ -16,7 +16,12 @@ function LK_3() {
             </div>
           </div>
           <div className="lk-clients__sidebar__top__menu">
-            <div className="lk-clients__sidebar__menu__item lk-clients__sidebar__menu__item-active">
+            <div
+              className="lk-clients__sidebar__menu__item lk-clients__sidebar__menu__item-active"
+              onClick={() => {
+                setChapter(2);
+              }}
+            >
               <div className="lk-clients__sidebar__menu__item__count">
                 <span>8</span>
               </div>
@@ -46,7 +51,12 @@ function LK_3() {
                 Отгрузка
               </span>
             </div>
-            <div className="lk-clients__sidebar__menu__item">
+            <div
+              className="lk-clients__sidebar__menu__item"
+              onClick={() => {
+                setChapter(1);
+              }}
+            >
               <img src="../images/lk/users_icon.svg" style={{ marginTop: 3 }} />
               <span className="lk-clients__sidebar__menu__item__title">
                 Клиенты
@@ -157,7 +167,12 @@ function LK_3() {
       </div>
       <div className="lk-clients__content">
         <div className="lk-clients__content__header">
-          <button className="lk-clients__content__header__btn lk__btn-160">
+          <button
+            className="lk-clients__content__header__btn lk__btn-160"
+            onClick={() => {
+              setChapter(2);
+            }}
+          >
             Назад
           </button>
           <button className="lk-clients__content__header__btn lk__btn-260">

@@ -1,6 +1,6 @@
 import SidabarFilter from "./SidebarFilter";
 
-function LK_4() {
+function LK_4({ setChapter }) {
   return (
     <div className="lk-clients__main">
       <div className="lk-clients__sidebar">
@@ -16,7 +16,12 @@ function LK_4() {
             </div>
           </div>
           <div className="lk-clients__sidebar__top__menu">
-            <div className="lk-clients__sidebar__menu__item">
+            <div
+              className="lk-clients__sidebar__menu__item"
+              onClick={() => {
+                setChapter(2);
+              }}
+            >
               <div className="lk-clients__sidebar__menu__item__count">
                 <span>8</span>
               </div>
@@ -46,7 +51,12 @@ function LK_4() {
                 Отгрузка
               </span>
             </div>
-            <div className="lk-clients__sidebar__menu__item lk-clients__sidebar__menu__item-active">
+            <div
+              className="lk-clients__sidebar__menu__item lk-clients__sidebar__menu__item-active"
+              onClick={() => {
+                setChapter(1);
+              }}
+            >
               <img
                 src="../images/lk/users_w_icon.svg"
                 style={{ marginTop: 3 }}
@@ -75,7 +85,12 @@ function LK_4() {
       </div>
       <div className="lk-clients__content">
         <div className="lk-clients__content__header">
-          <button className="lk-clients__content__header__btn lk__btn_orange_160">
+          <button
+            className="lk-clients__content__header__btn lk__btn_orange_160"
+            onClick={() => {
+              setChapter(1);
+            }}
+          >
             Назад
           </button>
         </div>
