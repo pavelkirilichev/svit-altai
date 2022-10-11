@@ -20,7 +20,7 @@ body {
 .home__main {
     margin-top: 175px;
     margin-left: 50px;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     gap: 50px 50px;
 }
