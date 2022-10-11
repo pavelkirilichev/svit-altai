@@ -1,4 +1,4 @@
-const catalogBig = [
+const catalog = [
   {
     id: 0,
     title: "Постельное белье",
@@ -37,101 +37,98 @@ const catalogBig = [
     src: "/kitchen/pillows.png",
     type: "kitchen",
   },
-];
-
-const catalogSmall = [
   {
-    id: 0,
+    id: 6,
     title: "Детская коллекция",
     src: "/bedroom/bed_newline_sm.png",
     type: "bedroom",
   },
   {
-    id: 1,
+    id: 7,
     title: "Покрывала",
     src: "/bedroom/bed_newline_sm.png",
     type: "bedroom",
   },
   {
-    id: 2,
+    id: 8,
     title: "Одеяла",
     src: "/bedroom/blankets.png",
     type: "bedroom",
   },
   {
-    id: 3,
+    id: 9,
     title: "Пледы",
     src: "/bedroom/bed_newline_sm.png",
     type: "bedroom",
   },
   {
-    id: 4,
+    id: 10,
     title: "Наматрисник",
     src: "/bedroom/bed_newline_sm.png",
     type: "bedroom",
   },
   {
-    id: 5,
+    id: 11,
     title: "Матрасы",
     src: "/bedroom/bed_newline_sm.png",
     type: "bedroom",
   },
 
   {
-    id: 6,
+    id: 12,
     title: "Платки",
     src: "/clothes/bed_newline_sm.png",
     type: "clothes",
   },
   {
-    id: 7,
+    id: 13,
     title: "Покрывала",
     src: "/clothes/bed_newline_sm.png",
     type: "clothes",
   },
   {
-    id: 8,
+    id: 14,
     title: "Пледики для СПА",
     src: "/clothes/blankets.png",
     type: "clothes",
   },
   {
-    id: 9,
+    id: 15,
     title: "Шоперы",
     src: "/clothes/bed_newline_sm.png",
     type: "clothes",
   },
 
   {
-    id: 10,
+    id: 16,
     title: "Декоративные чехлы",
     src: "/kitchen/bed_newline_sm.png",
     type: "kitchen",
   },
   {
-    id: 11,
+    id: 17,
     title: "Чехлы для табурета",
     src: "/kitchen/bed_newline_sm.png",
     type: "kitchen",
   },
   {
-    id: 12,
+    id: 18,
     title: "Органайзер",
     src: "/kitchen/blankets.png",
     type: "kitchen",
   },
   {
-    id: 13,
+    id: 19,
     title: "Чехол для одежды",
     src: "/kitchen/bed_newline_sm.png",
     type: "kitchen",
   },
   {
-    id: 14,
+    id: 20,
     title: "Полотенца",
     src: "/kitchen/blankets.png",
     type: "kitchen",
   },
 ];
 
-export { catalogBig, catalogSmall };
+export { catalog };
