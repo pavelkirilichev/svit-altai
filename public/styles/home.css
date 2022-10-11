@@ -66,7 +66,7 @@ body {
 }
 .home__goods__list {
     margin-top: 21px;
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     gap: 20px 20px;
     width: 100%;
@@ -434,7 +434,7 @@ body {
         height: 245px;
     }
 }
-@media (max-width: 350px) {
+@media (max-width: 360px) {
     .home__container {
         width: 95%;
     }

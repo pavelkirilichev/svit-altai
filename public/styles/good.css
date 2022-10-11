@@ -22,15 +22,16 @@
 .good__main__image {
     display: flex;
     justify-content: space-between;
-    padding: 11px 20px 0 20px;
+    padding: 11px 20px 0 0px;
 }
 .good__main__image__sidebar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 62px;
+    justify-content: space-between;
     margin-top: 1.56px;
-    width: 70px;
+    width: 80px;
+    height: 460px;
     padding-top: 10px;
 }
 .good__main__image__sidebar img {
@@ -39,17 +40,23 @@
 .good__main__image__sidebar__slider {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
     
+}
+.good__main__image__sidebar__slider__item {
+    display: flex;
+    justify-content: end;
+    gap: 5px;
 }
 .good__main__slider__img{
     width: 70px;
     height: 70px;
 }
 .good__main__slider__img-active {
-    width: 2px;
+    width: 3px;
     height: 100%;
-    background: #DA5C34;
+    background: #F20D0D;;
 }
 .good__main__image__content {
     display: flex;

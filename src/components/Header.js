@@ -29,22 +29,29 @@ function Header({ cartPrice }) {
                 <div className="nav-top__city">
                   <span className="nav-top__city-text">Новоалтайск</span>
                   <img
-                    src="./images/header/geo_icon.png"
+                    src="./images/header/geo_icon.svg"
                     className="nav-top__city-img"
                   />
                 </div>
               </div>
               <div className="nav-top__right">
+              <div className="nav-top__right__info">
+                  <img
+                    src="./images/header/info_icon.svg"
+                    className="nav-top__mail-img"
+                  />
+                  <span className="nav-top__info-text">О нас</span>
+                </div>
                 <div className="nav-top__right__email">
                   <img
-                    src="./images/header/mail_icon.png"
+                    src="./images/header/mail_icon.svg"
                     className="nav-top__mail-img"
                   />
                   <span className="nav-top__mail-text">svit22@mail.ru</span>
                 </div>
                 <div className="nav-top__right__phone">
                   <img
-                    src="./images/header/phone_icon.png"
+                    src="./images/header/phone_icon.svg"
                     className="nav-top__phone-img"
                   />
                   <span className="nav-top__phone-text">+7-3852-570-722</span>
@@ -58,7 +65,7 @@ function Header({ cartPrice }) {
             <div className="nav-bottom__row">
               <div className="nav-bottom__row__left">
                 <img
-                  src="./images/header/logo.png"
+                  src="./images/header/logo.svg"
                   className="nav-bottom__logo"
                 />
                 <div
@@ -72,8 +79,9 @@ function Header({ cartPrice }) {
                     setCatalogBlurActive("");
                   }}
                 >
+                  <span>Каталог</span>
                   <img
-                    src="./images/header/burger.png"
+                    src="./images/header/burger.svg"
                     className="nav-bottom__burger-img"
                   />
                 </div>
@@ -86,28 +94,19 @@ function Header({ cartPrice }) {
               </div>
               <div className="nav-bottom__row-right">
                 <div className="nav-bottom__row-right__icons">
-                  <div className="nav-bottom__row-right__icon">
-                    <img
-                      src="./images/header/home.png"
-                      className="nav-bottom__row-right__icon-img"
-                    />
-                  </div>
-                  <div className="nav-bottom__row-right__icon">
-                    <img
-                      src="./images/header/heart.png"
-                      className="nav-bottom__row-right__icon-img"
-                    />
-                  </div>
-                  <div className="nav-bottom__row-right__icon">
-                    <img
-                      src="./images/header/user.png"
-                      className="nav-bottom__row-right__icon-img"
-                    />
-                  </div>
+                <div
+                  className="nav-bottom__burger" style={{marginRight: 30}}
+                >
+                  <span>Войти</span>
+                  <img
+                    src="./images/header/user.svg"
+                    className="nav-bottom__burger-img"
+                  />
+                </div>
                   <div className="nav-bottom__row-right__icon cart-icon">
                     <Link to="/cart">
                       <img
-                        src="./images/header/cart.png"
+                        src="./images/header/cart.svg"
                         className="nav-bottom__row-right__icon-img cart-icon-img"
                       />
                     </Link>
@@ -135,14 +134,15 @@ function Header({ cartPrice }) {
       />
       <div className="header-mobile">
         <nav className="nav-mobile">
-          <img src="./images/header/logo_mobile.png" />
+          <img src="./images/header/logo_mobile.svg" />
           <div className="nav-mobile__search">
             <img
               src="./images/header/search.png"
               className="nav-mobile__search-img"
             />
           </div>
-          <div
+          <img 
+            src="./images/header/burger_mobile.svg" 
             className="nav-mobile__burger"
             onClick={() => {
               setPullMenuMob(
@@ -150,9 +150,7 @@ function Header({ cartPrice }) {
               );
               setCatalogChapter("");
             }}
-          >
-            <img src="./images/header/burger_mobile.png" />
-          </div>
+          />
         </nav>
       </div>
       <div className={"pull-menu-mobile" + pullMenuMob}>

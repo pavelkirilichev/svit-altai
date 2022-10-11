@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import FooterMob from "../components/FooterMob";
 
 function Good() {
+  const image_arr = ["images/good/sidebar_img.svg", "images/good/sidebar_img.svg", "images/good/sidebar_img.svg", "images/good/sidebar_img.svg"]
   return (
     <div className="wrapper">
       <Header cartPrice={2120} />
@@ -30,36 +31,48 @@ function Good() {
               <div className="good__main__image__sidebar">
                 <img src="../images/good/arrow_up.svg" />
                 <div className="good__main__image__sidebar__slider">
-                  <div
-                    src="../images/good/sidebar_img.svg"
-                    className="good__main__slider__img"
-                    style={{
-                      backgroundImage: "url(../images/good/sidebar_img.svg)",
-                    }}
-                  >
+                  <div className="good__main__image__sidebar__slider__item">
                     <div className="good__main__slider__img-active"></div>
+                      <div
+                        src="
+                        ../images/good/sidebar_img.svg"
+                        className="good__main__slider__img"
+                        style={{
+                          backgroundImage: "url(../images/good/sidebar_img.svg)",
+                        }}
+                      >
+                      </div>
                   </div>
-                  <div
-                    src="../images/good/sidebar_img.svg"
-                    className="good__main__slider__img"
-                    style={{
-                      backgroundImage: "url(../images/good/sidebar_img.svg)",
-                    }}
-                  ></div>
-                  <div
-                    src="../images/good/sidebar_img.svg"
-                    className="good__main__slider__img"
-                    style={{
-                      backgroundImage: "url(../images/good/sidebar_img.svg)",
-                    }}
-                  ></div>
-                  <div
-                    src="../images/good/sidebar_img.svg"
-                    className="good__main__slider__img"
-                    style={{
-                      backgroundImage: "url(../images/good/sidebar_img.svg)",
-                    }}
-                  ></div>
+                  <div className="good__main__image__sidebar__slider__item">
+                      <div
+                        src="../images/good/sidebar_img.svg"
+                        className="good__main__slider__img"
+                        style={{
+                          backgroundImage: "url(../images/good/sidebar_img.svg)",
+                        }}
+                      >
+                      </div>
+                  </div>
+                  <div className="good__main__image__sidebar__slider__item">
+                      <div
+                        src="../images/good/sidebar_img.svg"
+                        className="good__main__slider__img"
+                        style={{
+                          backgroundImage: "url(../images/good/sidebar_img.svg)",
+                        }}
+                      >
+                      </div>
+                  </div>
+                  <div className="good__main__image__sidebar__slider__item">
+                      <div
+                        src="../images/good/sidebar_img.svg"
+                        className="good__main__slider__img"
+                        style={{
+                          backgroundImage: "url(../images/good/sidebar_img.svg)",
+                        }}
+                      >
+                      </div>
+                  </div>
                 </div>
                 <img src="../images/good/arrow_down.svg" />
               </div>

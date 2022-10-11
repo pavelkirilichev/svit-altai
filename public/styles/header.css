@@ -19,7 +19,7 @@
 .nav-top {
     height: 50px;
     width: 100%;
-    background: #DA5C34;
+    background: #F2F4F5;
 }
 .nav-top__row {
     height: 50px;
@@ -36,11 +36,22 @@
     align-items: center;
 }
 .nav-top__city-text {
-    color: #fff;
+    color: #545454;
     font-size: 14px;
 }
 .nav-top__city-img {
     margin-left: 12px;
+}
+
+.nav-top__right__info {
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+}
+.nav-top__info-text {
+    margin-left: 15px;
+    color: #545454;
+    font-size: 12px;
 }
 
 .nav-top__right__email {
@@ -49,7 +60,7 @@
 }
 .nav-top__mail-text {
     margin-left: 30px;
-    color: #fff;
+    color: #545454;
     font-size: 12px;
 }
 
@@ -60,7 +71,7 @@
 }
 .nav-top__phone-text {
     margin-left: 22px;
-    color: #fff;
+    color: #545454;
     font-size: 12px;
 }
 
@@ -90,20 +101,22 @@
     height: 60px
 }
 .nav-bottom__burger {
+    box-sizing: border-box;
+    padding: 0 20px;
     cursor: pointer;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-left: 40px;
-    width: 40px;
+    width: 180px;
     height: 40px;
-    border-radius: 50%;
-    border: 1px solid #F2F4F5;
-    background: #fff;
+    background: #F2F4F5;
+    border-radius: 20px;
 }
-.nav-bottom__burger-img {
-    width: 24px;
-    height: 24px;
+.nav-bottom__burger span{
+    font-weight: 500;
+    font-size: 16px;
+    color: #545454;
 }
 
 .nav-bottom__search {
@@ -153,7 +166,7 @@
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 0.01em;
-    color: #DA5C34;
+    color: #F20D0D;
 }
 .pull__main {
     z-index: 2;
@@ -391,7 +404,7 @@
 
 .header-mobile {
     width: 100%;
-    background: #DA5C34;
+    background: #FFFFFF;
 }
 .nav-mobile {
     display: flex;

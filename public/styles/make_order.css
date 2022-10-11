@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0 10px;
     margin: 180px auto;
-    width: 1200px;
+    max-width: 1200px;
 }
 .mo__main {
     display: flex;
@@ -10,7 +10,7 @@
     gap: 37px;
     box-sizing: border-box;
     padding: 20px;
-    width: 1180px;
+    max-width: 1180px;
     min-height: 600px;
     background: #FFFFFF;
     border-radius: 10px;
@@ -93,7 +93,7 @@
     color: #FFFFFF;
 }
 .mo__content {
-    width: 1140px;
+    max-width: 1140px;
     height: 880px;
     background: #FFFFFF;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
@@ -402,4 +402,9 @@
     font-size: 12px;
     letter-spacing: 0.01em;
     color: #545454;
+}
+@media (max-width: 1024px) {
+    .mo__content__positions {
+        gap: 50px;
+    }
 }
