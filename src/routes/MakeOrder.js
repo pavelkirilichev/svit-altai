@@ -8,6 +8,8 @@ function MakeOrder() {
   const [delivery, setDelivery] = useState("local");
   const [payment, setPayment] = useState("online");
   const [paymentSystem, setPaymentSystem] = useState("card");
+  const [pullMenuMob, setPullMenuMob] = useState("");
+  const [pull, setPull] = useState("");
 
   function BuyerDate() {
     return (
@@ -326,8 +328,8 @@ function MakeOrder() {
 
   return (
     <div className="wrapper">
-      <Header cartPrice={2120} />
-      <div className="mo__section">
+      <Header cartPrice={2120} pull={pull} setPull={setPull} pullMenuMob={pullMenuMob} setPullMenuMob={setPullMenuMob}/>
+      <div className={(pull == "" && pullMenuMob == "") ? "mo__section-active" : "mo__section"}>
         <div className="mo__main">
           <div className="mo__header">
             <span className="mo__name__header">Оформление заказа</span>

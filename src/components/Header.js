@@ -3,9 +3,10 @@ import { catalog } from "./CatalogJSON";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Header({ cartPrice }) {
-  const [pullMenuMob, setPullMenuMob] = useState("");
-  const [pull, setPull] = useState("");
+
+function Header({ cartPrice, pull, setPull, pullMenuMob, setPullMenuMob }) {
+  
+  
   const [catalogChapter, setCatalogChapter] = useState("");
   const [catalogMenuImgActive, setCatalogMenuImgActive] = useState("");
 

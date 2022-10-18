@@ -1,4 +1,9 @@
 .lk__section {
+    display: none;
+    min-height: 1300px;
+}
+.lk__section-active {
+    display: block;
     min-height: 1300px;
 }
 .lk-clients__main {

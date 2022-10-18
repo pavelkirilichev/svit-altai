@@ -30,13 +30,15 @@ const goods = [
 ];
 
 function Cart() {
+  const [pullMenuMob, setPullMenuMob] = useState("");
+  const [pull, setPull] = useState("");
   const [goodsState, setGoodsState] = useState(goods);
   const [cartPrice, setCartPrice] = useState(4240);
   const [chapter, setChapter] = useState("cart");
   return (
     <div className="wrapper">
-      <Header cartPrice={cartPrice} />
-      <div className="cart__main">
+      <Header cartPrice={2120} pull={pull} setPull={setPull} pullMenuMob={pullMenuMob} setPullMenuMob={setPullMenuMob}/>
+      <div className={(pull == "" && pullMenuMob == "") ? "cart__main-active" : "cart__main"}>
         <div className="cart__container">
           <div className="cart__row">
             <div className="cart__row__sidebar">

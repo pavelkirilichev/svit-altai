@@ -9,6 +9,8 @@ import { useState } from "react";
 
 function LK() {
   const [chapter, setChapter] = useState(2);
+  const [pullMenuMob, setPullMenuMob] = useState("");
+  const [pull, setPull] = useState("");
   let section;
   if (chapter == 1) {
     section = <LK_1 setChapter={setChapter} />;
@@ -25,8 +27,8 @@ function LK() {
 
   return (
     <div className="wrapper">
-      <Header cartPrice={2120} />
-      <section className="lk__section">{section}</section>
+      <Header cartPrice={2120} pull={pull} setPull={setPull} pullMenuMob={pullMenuMob} setPullMenuMob={setPullMenuMob}/>
+      <section className={(pull == "" && pullMenuMob == "") ? "lk__section-active" : "lk__section"}>{section}</section>
       <Footer />
       <FooterMob cartPrice={212000} />
     </div>

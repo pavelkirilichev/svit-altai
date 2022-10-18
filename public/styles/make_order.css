@@ -1,4 +1,12 @@
 .mo__section {
+    display: none;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin: 180px auto;
+    max-width: 1200px;
+}
+.mo__section-active {
+    display: block;
     box-sizing: border-box;
     padding: 0 10px;
     margin: 180px auto;

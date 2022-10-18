@@ -1,4 +1,10 @@
 .tkani__main_section {
+    display: none;
+    margin-top: 130px;
+    min-height: calc(100vh - 180px);
+}
+.tkani__main_section-active {
+    display: block;
     margin-top: 130px;
     min-height: calc(100vh - 180px);
 }

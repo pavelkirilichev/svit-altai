@@ -1,4 +1,9 @@
 .good__main-section {
+    display: none;
+    margin-top: 130px;
+}
+.good__main-section-active {
+    display: block;
     margin-top: 130px;
 }
 .good__container {
@@ -311,6 +316,9 @@
     font-size: 15px;
     line-height: 18px;
     color: #545454;   
+}
+.pull__active .good__main-section {
+    display: none;
 }
 
 @media (max-width: 1200px) {

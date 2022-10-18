@@ -1,13 +1,17 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FooterMob from "../components/FooterMob";
+import { useState } from "react";
+
 
 function Good() {
+  const [pullMenuMob, setPullMenuMob] = useState("");
+  const [pull, setPull] = useState("");
   const image_arr = ["images/good/sidebar_img.svg", "images/good/sidebar_img.svg", "images/good/sidebar_img.svg", "images/good/sidebar_img.svg"]
   return (
     <div className="wrapper">
-      <Header cartPrice={2120} />
-      <div className="good__main-section">
+      <Header cartPrice={2120} pull={pull} setPull={setPull} pullMenuMob={pullMenuMob} setPullMenuMob={setPullMenuMob}/>
+      <div className={(pull == "" && pullMenuMob == "") ? "good__main-section-active" : "good__main-section"}>
         <div className="good__container">
           <div class="tkani__navigation">
             <div class="tkani__navigation__back-btn">Назад</div>

@@ -6,12 +6,15 @@ import LoginForm from "../components/LoginForm";
 import RecChoise from "../components/RecChoise";
 import RecMail from "../components/RecMail";
 import HomeMob from "../components/HomeMob";
+import { useState } from "react";
 
 function Home() {
+  const [pullMenuMob, setPullMenuMob] = useState("");
+  const [pull, setPull] = useState(""); 
   return (
     <div className="wrapper">
-      <Header cartPrice={2120} />
-      <div className="home__main">
+      <Header cartPrice={2120} pull={pull} setPull={setPull} pullMenuMob={pullMenuMob} setPullMenuMob={setPullMenuMob}/>
+      <div className={(pull == "" && pullMenuMob == "") ? "home__main-active" : "home__main"}>
         <div className="home__main__image"></div>
         <section className="home__container">
           <div className="home__menu">

@@ -1,11 +1,14 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useState } from "react";
 
 function Tkani() {
+  const [pullMenuMob, setPullMenuMob] = useState("");
+  const [pull, setPull] = useState("");
   return (
     <div className="wrapper">
-      <Header cartPrice={2120} />
-      <div className="tkani__main_section">
+      <Header cartPrice={2120} pull={pull} setPull={setPull} pullMenuMob={pullMenuMob} setPullMenuMob={setPullMenuMob}/>
+      <div className={(pull == "" && pullMenuMob == "") ? "tkani__main_section-active" : "tkani__main_section"}>
         <div className="tkani__container">
           <div className="tkani__navigation">
             <div className="tkani__navigation__back-btn">Назад</div>

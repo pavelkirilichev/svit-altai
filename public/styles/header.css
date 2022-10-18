@@ -171,7 +171,7 @@
 .pull__main {
     z-index: 2;
     background: #F2F4F5;
-    position: fixed;
+    position: absolute;
     height: 100%;
     display: none;
     align-items: flex-start;
@@ -211,7 +211,7 @@
     transition: opacity 0.3s;
     opacity: 1;
 }
-.pull-catalog-bg-disable {
+.pull-catalog-bg-disable { 
     transition: opacity 0.3s;
     opacity: 0;
 }
