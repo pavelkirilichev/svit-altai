@@ -2,19 +2,40 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FooterMob from "../components/FooterMob";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 function Good() {
   const [pullMenuMob, setPullMenuMob] = useState("");
   const [pull, setPull] = useState("");
-  const image_arr = ["images/good/sidebar_img.svg", "images/good/sidebar_img.svg", "images/good/sidebar_img.svg", "images/good/sidebar_img.svg"]
+  const [img, setImg] = useState(0);
+  const [goodCount, setGoodCount] = useState(0);
+  const image_arr = [
+    "images/good/sidebar_img.svg",
+    "images/good/sidebar_img.svg",
+    "images/good/sidebar_img.svg",
+    "images/good/sidebar_img.svg",
+  ];
   return (
     <div className="wrapper">
-      <Header cartPrice={2120} pull={pull} setPull={setPull} pullMenuMob={pullMenuMob} setPullMenuMob={setPullMenuMob}/>
-      <div className={(pull == "" && pullMenuMob == "") ? "good__main-section-active" : "good__main-section"}>
+      <Header
+        cartPrice={2120}
+        pull={pull}
+        setPull={setPull}
+        pullMenuMob={pullMenuMob}
+        setPullMenuMob={setPullMenuMob}
+      />
+      <div
+        className={
+          pull == "" && pullMenuMob == ""
+            ? "good__main-section-active"
+            : "good__main-section"
+        }
+      >
         <div className="good__container">
           <div class="tkani__navigation">
-            <div class="tkani__navigation__back-btn">Назад</div>
+            <Link to={"/tkani"} state={{ chapter: "Спальня" }}>
+              <div class="tkani__navigation__back-btn">Назад</div>
+            </Link>
             <ul class="tkani__navigation__chapter-list">
               <li class="tkani__navigation__chapter__item good__nav__item">
                 Каталог
@@ -33,52 +54,46 @@ function Good() {
           <div className="good__main">
             <div className="good__main__image">
               <div className="good__main__image__sidebar">
-                <img src="../images/good/arrow_up.svg" />
+                <img
+                  src="../images/good/arrow_up.svg"
+                  onClick={() => {
+                    if (img == 0) {
+                      setImg(image_arr.length - 1);
+                    } else {
+                      setImg(img - 1);
+                    }
+                  }}
+                />
                 <div className="good__main__image__sidebar__slider">
-                  <div className="good__main__image__sidebar__slider__item">
-                    <div className="good__main__slider__img-active"></div>
-                      <div
-                        src="
-                        ../images/good/sidebar_img.svg"
-                        className="good__main__slider__img"
-                        style={{
-                          backgroundImage: "url(../images/good/sidebar_img.svg)",
-                        }}
-                      >
+                  {image_arr.map((item, key) => {
+                    return (
+                      <div className="good__main__image__sidebar__slider__item">
+                        {key == img ? (
+                          <div className="good__main__slider__img-active"></div>
+                        ) : (
+                          ""
+                        )}
+                        <div
+                          src="../images/good/sidebar_img.svg"
+                          className="good__main__slider__img"
+                          style={{
+                            backgroundImage: "url(../" + item + ")",
+                          }}
+                        ></div>
                       </div>
-                  </div>
-                  <div className="good__main__image__sidebar__slider__item">
-                      <div
-                        src="../images/good/sidebar_img.svg"
-                        className="good__main__slider__img"
-                        style={{
-                          backgroundImage: "url(../images/good/sidebar_img.svg)",
-                        }}
-                      >
-                      </div>
-                  </div>
-                  <div className="good__main__image__sidebar__slider__item">
-                      <div
-                        src="../images/good/sidebar_img.svg"
-                        className="good__main__slider__img"
-                        style={{
-                          backgroundImage: "url(../images/good/sidebar_img.svg)",
-                        }}
-                      >
-                      </div>
-                  </div>
-                  <div className="good__main__image__sidebar__slider__item">
-                      <div
-                        src="../images/good/sidebar_img.svg"
-                        className="good__main__slider__img"
-                        style={{
-                          backgroundImage: "url(../images/good/sidebar_img.svg)",
-                        }}
-                      >
-                      </div>
-                  </div>
+                    );
+                  })}
                 </div>
-                <img src="../images/good/arrow_down.svg" />
+                <img
+                  src="../images/good/arrow_down.svg"
+                  onClick={() => {
+                    if (img == image_arr.length - 1) {
+                      setImg(0);
+                    } else {
+                      setImg(img + 1);
+                    }
+                  }}
+                />
               </div>
               <div className="good__main__image__content">
                 <img src="../images/good/good_image.png" />
@@ -103,11 +118,23 @@ function Good() {
                     <div className="good__main__down__head">
                       <div className="good__main__down__choice">
                         <div className="good__main__down__count">
-                          <img src="../images/good/minus.svg" />
+                          <img
+                            src="../images/good/minus.svg"
+                            onClick={() => {
+                              if (goodCount != 0) {
+                                setGoodCount(goodCount - 1);
+                              }
+                            }}
+                          />
                           <span className="cart__main__content__item__count-price__bottom-btn-cnt unselectable">
-                            2
+                            {goodCount}
                           </span>
-                          <img src="../images/good/plus.svg" />
+                          <img
+                            src="../images/good/plus.svg"
+                            onClick={() => {
+                              setGoodCount(goodCount + 1);
+                            }}
+                          />
                         </div>
                       </div>
                       <div className="good__main__staff">
@@ -172,20 +199,24 @@ function Good() {
           </div>
           <div className="home__goods__list good__list">
             <div className="home__goods__item">
-              <div className="home__goods__item__image"></div>
-              <div className="home__goods__item__info">
-                <div className="home__goods__item__price">
-                  <span className="home__goods__item__price__title">
-                    2120 ₽
-                  </span>
-                  <span className="home__goods__item__price__subtitle">
-                    2430 ₽
-                  </span>
+              <Link to={"/good"}>
+                <div className="home__goods__item__image"></div>
+              </Link>
+              <Link to={"/good"}>
+                <div className="home__goods__item__info">
+                  <div className="home__goods__item__price">
+                    <span className="home__goods__item__price__title">
+                      2120 ₽
+                    </span>
+                    <span className="home__goods__item__price__subtitle">
+                      2430 ₽
+                    </span>
+                  </div>
+                  <p className="home__goods__item__info__title">
+                    Подушка “Memory Foam Roller”{" "}
+                  </p>
                 </div>
-                <p className="home__goods__item__info__title">
-                  Подушка “Memory Foam Roller”{" "}
-                </p>
-              </div>
+              </Link>
               <div className="home__goods__item__bottom">
                 <div className="home__goods__item__bottom__left">
                   <img src="../images/home/minus_icon.svg" />
@@ -196,20 +227,24 @@ function Good() {
               </div>
             </div>
             <div className="home__goods__item">
-              <div className="home__goods__item__image"></div>
-              <div className="home__goods__item__info">
-                <div className="home__goods__item__price">
-                  <span className="home__goods__item__price__title">
-                    2120 ₽
-                  </span>
-                  <span className="home__goods__item__price__subtitle">
-                    2430 ₽
-                  </span>
+              <Link to={"/good"}>
+                <div className="home__goods__item__image"></div>
+              </Link>
+              <Link to={"/good"}>
+                <div className="home__goods__item__info">
+                  <div className="home__goods__item__price">
+                    <span className="home__goods__item__price__title">
+                      2120 ₽
+                    </span>
+                    <span className="home__goods__item__price__subtitle">
+                      2430 ₽
+                    </span>
+                  </div>
+                  <p className="home__goods__item__info__title">
+                    Подушка “Memory Foam Roller”{" "}
+                  </p>
                 </div>
-                <p className="home__goods__item__info__title">
-                  Подушка “Memory Foam Roller”{" "}
-                </p>
-              </div>
+              </Link>
               <div className="home__goods__item__bottom">
                 <div className="home__goods__item__bottom__left">
                   <img src="../images/home/minus_icon.svg" />
@@ -220,20 +255,24 @@ function Good() {
               </div>
             </div>
             <div className="home__goods__item">
-              <div className="home__goods__item__image"></div>
-              <div className="home__goods__item__info">
-                <div className="home__goods__item__price">
-                  <span className="home__goods__item__price__title">
-                    2120 ₽
-                  </span>
-                  <span className="home__goods__item__price__subtitle">
-                    2430 ₽
-                  </span>
+              <Link to={"/good"}>
+                <div className="home__goods__item__image"></div>
+              </Link>
+              <Link to={"/good"}>
+                <div className="home__goods__item__info">
+                  <div className="home__goods__item__price">
+                    <span className="home__goods__item__price__title">
+                      2120 ₽
+                    </span>
+                    <span className="home__goods__item__price__subtitle">
+                      2430 ₽
+                    </span>
+                  </div>
+                  <p className="home__goods__item__info__title">
+                    Подушка “Memory Foam Roller”{" "}
+                  </p>
                 </div>
-                <p className="home__goods__item__info__title">
-                  Подушка “Memory Foam Roller”{" "}
-                </p>
-              </div>
+              </Link>
               <div className="home__goods__item__bottom">
                 <div className="home__goods__item__bottom__left">
                   <img src="../images/home/minus_icon.svg" />
@@ -244,20 +283,24 @@ function Good() {
               </div>
             </div>
             <div className="home__goods__item">
-              <div className="home__goods__item__image"></div>
-              <div className="home__goods__item__info">
-                <div className="home__goods__item__price">
-                  <span className="home__goods__item__price__title">
-                    2120 ₽
-                  </span>
-                  <span className="home__goods__item__price__subtitle">
-                    2430 ₽
-                  </span>
+              <Link to={"/good"}>
+                <div className="home__goods__item__image"></div>
+              </Link>
+              <Link to={"/good"}>
+                <div className="home__goods__item__info">
+                  <div className="home__goods__item__price">
+                    <span className="home__goods__item__price__title">
+                      2120 ₽
+                    </span>
+                    <span className="home__goods__item__price__subtitle">
+                      2430 ₽
+                    </span>
+                  </div>
+                  <p className="home__goods__item__info__title">
+                    Подушка “Memory Foam Roller”{" "}
+                  </p>
                 </div>
-                <p className="home__goods__item__info__title">
-                  Подушка “Memory Foam Roller”{" "}
-                </p>
-              </div>
+              </Link>
               <div className="home__goods__item__bottom">
                 <div className="home__goods__item__bottom__left">
                   <img src="../images/home/minus_icon.svg" />

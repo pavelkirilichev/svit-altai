@@ -194,6 +194,9 @@
     width: 145px;
     height: 40px;
 }
+.good__main__down__count img {
+    cursor: pointer;
+}
 .good__main__down__right {
     margin-right: 10px;
     width: 492px;
@@ -272,6 +275,7 @@
 }
 
 .good__main__staff__btn {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;

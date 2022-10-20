@@ -7,7 +7,7 @@ function LK_1({ setChapter }) {
         <div className="lk-clients__sidebar__top">
           <div className="cart__row__sidebar__info">
             <img
-              src="./images/cart/profile_icon.png"
+              src="./images/cart/profile_icon.svg"
               className="cart__profile__icon"
             />
             <div className="cart__info__title">

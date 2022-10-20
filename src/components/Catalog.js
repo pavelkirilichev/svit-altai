@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { catalog } from "./CatalogJSON";
 
 function Catalog({
@@ -12,6 +13,8 @@ function Catalog({
   setCatalogMenuImgTwo,
   catalogMenuImgThree,
   setCatalogMenuImgThree,
+  route,
+  setChapterTkani,
 }) {
   return (
     <div className={"pull__main" + pull}>
@@ -44,9 +47,19 @@ function Catalog({
               .filter((item) => item.type === "bedroom")
               .map((catalogItem) => {
                 return (
-                  <div className="pull-catalog__item">
-                    <span>{catalogItem.title}</span>
-                  </div>
+                  <Link to={"/tkani"} state={{ chapter: "Спальня" }}>
+                    <div
+                      className="pull-catalog__item"
+                      onClick={() => {
+                        if (route == "tkani") {
+                          setChapterTkani("Спальня");
+                          setPull("");
+                        }
+                      }}
+                    >
+                      <span> {catalogItem.title}</span>
+                    </div>
+                  </Link>
                 );
               })}
           </div>
@@ -77,9 +90,19 @@ function Catalog({
               .filter((item) => item.type === "clothes")
               .map((catalogItem) => {
                 return (
-                  <div className="pull-catalog__item">
-                    <span>{catalogItem.title}</span>
-                  </div>
+                  <Link to={"/tkani"} state={{ chapter: "Одежда" }}>
+                    <div
+                      className="pull-catalog__item"
+                      onClick={() => {
+                        if (route == "tkani") {
+                          setChapterTkani("Одежда");
+                          setPull("");
+                        }
+                      }}
+                    >
+                      <span> {catalogItem.title}</span>
+                    </div>
+                  </Link>
                 );
               })}
           </div>
@@ -110,9 +133,19 @@ function Catalog({
               .filter((item) => item.type === "kitchen")
               .map((catalogItem) => {
                 return (
-                  <div className="pull-catalog__item">
-                    <span>{catalogItem.title}</span>
-                  </div>
+                  <Link to={"/tkani"} state={{ chapter: "Кухня" }}>
+                    <div
+                      className="pull-catalog__item"
+                      onClick={() => {
+                        if (route == "tkani") {
+                          setChapterTkani("Кухня");
+                          setPull("");
+                        }
+                      }}
+                    >
+                      <span> {catalogItem.title}</span>
+                    </div>
+                  </Link>
                 );
               })}
           </div>

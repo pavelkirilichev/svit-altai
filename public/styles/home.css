@@ -8,6 +8,9 @@ body {
     background: #F2F4F5;
     font-family: 'Montserrat', sans-serif;
 }
+a {
+    text-decoration: none;
+}
 .wrapper {
     display: flex;
     flex-direction: column; 
@@ -59,9 +62,6 @@ body {
     font-size: 40px;
     color: #545454;
 }
-.home__menu__item:first-child span{
-    color: #F20D0D;
-}
 .home__goods {
     margin-top: 81px;
 }
@@ -89,6 +89,7 @@ body {
     border-radius: 10px;
 }
 .home__goods__item__image {
+    cursor: pointer;
     width: 260px;
     height: 260px; 
     background: url(../images/home/good.png);

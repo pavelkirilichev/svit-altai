@@ -37,14 +37,24 @@ function Cart() {
   const [chapter, setChapter] = useState("cart");
   return (
     <div className="wrapper">
-      <Header cartPrice={2120} pull={pull} setPull={setPull} pullMenuMob={pullMenuMob} setPullMenuMob={setPullMenuMob}/>
-      <div className={(pull == "" && pullMenuMob == "") ? "cart__main-active" : "cart__main"}>
+      <Header
+        cartPrice={cartPrice}
+        pull={pull}
+        setPull={setPull}
+        pullMenuMob={pullMenuMob}
+        setPullMenuMob={setPullMenuMob}
+      />
+      <div
+        className={
+          pull == "" && pullMenuMob == "" ? "cart__main-active" : "cart__main"
+        }
+      >
         <div className="cart__container">
           <div className="cart__row">
             <div className="cart__row__sidebar">
               <div className="cart__row__sidebar__info">
                 <img
-                  src="./images/cart/profile_icon.png"
+                  src="./images/cart/profile_icon.svg"
                   className="cart__profile__icon"
                 />
                 <div className="cart__info__title">

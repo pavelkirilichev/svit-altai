@@ -3,10 +3,15 @@ import { catalog } from "./CatalogJSON";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-
-function Header({ cartPrice, pull, setPull, pullMenuMob, setPullMenuMob }) {
-  
-  
+function Header({
+  cartPrice,
+  pull,
+  setPull,
+  pullMenuMob,
+  setPullMenuMob,
+  route,
+  setChapterTkani,
+}) {
   const [catalogChapter, setCatalogChapter] = useState("");
   const [catalogMenuImgActive, setCatalogMenuImgActive] = useState("");
 
@@ -36,7 +41,7 @@ function Header({ cartPrice, pull, setPull, pullMenuMob, setPullMenuMob }) {
                 </div>
               </div>
               <div className="nav-top__right">
-              <div className="nav-top__right__info">
+                <div className="nav-top__right__info">
                   <img
                     src="./images/header/info_icon.svg"
                     className="nav-top__mail-img"
@@ -65,10 +70,12 @@ function Header({ cartPrice, pull, setPull, pullMenuMob, setPullMenuMob }) {
           <div className="header__container">
             <div className="nav-bottom__row">
               <div className="nav-bottom__row__left">
-                <img
-                  src="./images/header/logo.svg"
-                  className="nav-bottom__logo"
-                />
+                <Link to="/">
+                  <img
+                    src="./images/header/logo.svg"
+                    className="nav-bottom__logo"
+                  />
+                </Link>
                 <div
                   className="nav-bottom__burger"
                   onClick={() => {
@@ -95,15 +102,16 @@ function Header({ cartPrice, pull, setPull, pullMenuMob, setPullMenuMob }) {
               </div>
               <div className="nav-bottom__row-right">
                 <div className="nav-bottom__row-right__icons">
-                <div
-                  className="nav-bottom__burger" style={{marginRight: 30}}
-                >
-                  <span>Войти</span>
-                  <img
-                    src="./images/header/user.svg"
-                    className="nav-bottom__burger-img"
-                  />
-                </div>
+                  <div
+                    className="nav-bottom__burger"
+                    style={{ marginRight: 30 }}
+                  >
+                    <span>Войти</span>
+                    <img
+                      src="./images/header/user.svg"
+                      className="nav-bottom__burger-img"
+                    />
+                  </div>
                   <div className="nav-bottom__row-right__icon cart-icon">
                     <Link to="/cart">
                       <img
@@ -132,6 +140,8 @@ function Header({ cartPrice, pull, setPull, pullMenuMob, setPullMenuMob }) {
         setCatalogMenuImgTwo={setCatalogMenuImgTwo}
         catalogMenuImgThree={catalogMenuImgThree}
         setCatalogMenuImgThree={setCatalogMenuImgThree}
+        route={route}
+        setChapterTkani={setChapterTkani}
       />
       <div className="header-mobile">
         <nav className="nav-mobile">
@@ -142,8 +152,8 @@ function Header({ cartPrice, pull, setPull, pullMenuMob, setPullMenuMob }) {
               className="nav-mobile__search-img"
             />
           </div>
-          <img 
-            src="./images/header/burger_mobile.svg" 
+          <img
+            src="./images/header/burger_mobile.svg"
             className="nav-mobile__burger"
             onClick={() => {
               setPullMenuMob(
