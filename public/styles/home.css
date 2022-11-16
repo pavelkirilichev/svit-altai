@@ -57,6 +57,7 @@ a {
     background: #545454;
 }
 .home__menu__item span {
+    width: 100%;
     line-height: 100%;
     font-weight: 600;
     font-size: 40px;
@@ -396,12 +397,19 @@ a {
     .home__menu__item:nth-child(3) { 
         justify-content: end;
     }
-    .home__menu__item:nth-child(7){ 
-        width: 50%;
+    .home__menu__clothes{ 
+        width: 100%;
         justify-content: end;
     }
-    .home__menu__item:nth-child(7) span{ 
+    .home__menu__clothes span{ 
         text-align: right;
+    }
+    .home__menu__kitchen { 
+        width: 100%;
+        justify-content: start;
+    }
+    .home__menu__kitchen span{ 
+        text-align: start;
     }
     
 }
@@ -423,20 +431,43 @@ a {
     }
     .home__menu__item {
         text-align: center;
-        width: 34%;
+        width: 160px;
         cursor: pointer;
         display: flex;
         align-items: center;
         height: 79px;
     }
-    .home__menu__item:nth-child(7){ 
-        width: 34%;
+    .home__menu__clothes{ 
+        width: 160px;
+        justify-content: end;
     }
+    .home__menu__clothes span{ 
+        text-align: right;
+    }
+    .home__menu__kitchen { 
+        width: 160px;
+        justify-content: start;
+    }
+    .home__menu__kitchen span{ 
+        text-align: start;
+    }
+    .home__menu__bedroom span{ 
+        text-align: right;
+    }
+    
     .home-mob__goods__item {
         width: 45%;
     }
 }
 @media (max-width: 400px) {
+    .home__menu__item {
+        text-align: center;
+        width: 120px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        height: 79px;
+    }
     .footer_mob {
         padding: 0 5px !important;
     }

@@ -462,6 +462,8 @@
     font-weight: 500;
 }
 .pull-menu-mobile__list {
+    box-sizing: border-box;
+    padding-bottom: 30px;
     margin-top: -10px;
     list-style: none;
     display: flex;
@@ -548,6 +550,9 @@
     }
     .pull-menu-mobile__active {
         display: block;
+    }
+    .pull-catalog__list {
+        width: 100%;
     }
     .pull-menu-mobile__item__inner__list {
         margin-top: -15px;

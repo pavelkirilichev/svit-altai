@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { catalog } from "./CatalogJSON";
+import { catalog } from "../data/CatalogJSON";
 
 function Catalog({
   setPull,
