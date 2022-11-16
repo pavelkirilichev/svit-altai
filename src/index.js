@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import About from "./routes/About";
 import Cart from "./routes/Cart";
 import Good from "./routes/Good";
 import Home from "./routes/Home";
@@ -17,6 +18,7 @@ root.render(
       <Route path="/good" element={<Good />} />
       <Route path="/lk" element={<LK />} />
       <Route path="/mo" element={<MakeOrder />} />
+      <Route path="/about" element={<About />} />
     </Routes>
   </BrowserRouter>
 );
