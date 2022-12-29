@@ -11,6 +11,7 @@ function Header({
   setPullMenuMob,
   route,
   setChapterTkani,
+  isAbout,
 }) {
   const [catalogChapter, setCatalogChapter] = useState("");
   const [catalogMenuImgActive, setCatalogMenuImgActive] = useState("");
@@ -46,7 +47,9 @@ function Header({
                     src="./images/header/info_icon.svg"
                     className="nav-top__mail-img"
                   />
-                  <span className="nav-top__info-text">О нас</span>
+                  <Link to="/about">
+                    <span className="nav-top__info-text">О нас</span>
+                  </Link>
                 </div>
                 <div className="nav-top__right__email">
                   <img
@@ -143,7 +146,13 @@ function Header({
         route={route}
         setChapterTkani={setChapterTkani}
       />
-      <div className="header-mobile">
+      <div
+        className="header-mobile"
+        style={{
+          backgroundColor:
+            typeof isAbout == "undefined" ? "#ffffff" : "#F20D0D",
+        }}
+      >
         <nav className="nav-mobile">
           <img src="./images/header/logo_mobile.svg" />
           <div className="nav-mobile__search">
@@ -153,12 +162,17 @@ function Header({
             />
           </div>
           <img
-            src="./images/header/burger_mobile.svg"
+            src={
+              typeof isAbout == "undefined"
+                ? "./images/header/burger_mobile.svg"
+                : "./images/header/burger_mobile-white.svg"
+            }
             className="nav-mobile__burger"
             onClick={() => {
               setPullMenuMob(
                 pullMenuMob == "" ? " pull-menu-mobile__active" : ""
               );
+              console.log(pullMenuMob);
               setCatalogChapter("");
             }}
           />
