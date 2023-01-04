@@ -172,7 +172,7 @@ function Header({
               setPullMenuMob(
                 pullMenuMob == "" ? " pull-menu-mobile__active" : ""
               );
-              console.log(pullMenuMob);
+
               setCatalogChapter("");
             }}
           />
