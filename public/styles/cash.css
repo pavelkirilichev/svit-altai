@@ -1,0 +1,159 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.cash {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 20px 0px 0px 20px;
+  width: 820px;
+  height: 400px;
+  background: #fff;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+}
+.cash__left {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.cash__set {
+  display: flex;
+  gap: 55px;
+}
+.cash__set__title {
+  font-weight: 500;
+  font-size: 32px;
+  color: #545454;
+  line-height: 140%;
+}
+.cash__set__capital {
+  width: 250px;
+  height: 40px;
+  border: 1px solid #f20d0d;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+.cash__set__capital:nth-child(1) {
+  font-weight: 500;
+  font-size: 12px;
+  color: #545454;
+}
+.cash__set__capital:nth-child(2) {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #545454;
+}
+.cash__card {
+  position: relative;
+  margin: 30px;
+}
+.cash__card__item {
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+  height: 185px;
+  background: #f2f4f5;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 29px 10px 7.5px 20px;
+}
+.cash__card__item:nth-child(2) {
+  position: absolute;
+  top: 34px;
+  left: 130px;
+}
+.cash__card__item:nth-child(1) {
+  position: absolute;
+  z-index: 1;
+}
+.cash__card__item__info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cash__card__item__info__valid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.cash__card__item__info__number {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #545454;
+}
+.cash__card__item__info__input {
+  box-sizing: border-box;
+  padding: 5px 10px;
+  width: 270px;
+  height: 30px;
+  background: #f2f4f5;
+  box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+.cash__card__item__info__correct {
+  margin-left: 10px;
+  width: 90px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #545454;
+}
+.cash__input-small {
+  width: 100px;
+}
+.cash__card__item__info__icons {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 16px;
+}
+.cash__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+}
+.cash__card__valid__down {
+  margin-top: 80px;
+  display: flex;
+  align-items: end;
+}
+.cash__right__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 40px;
+  background: #f20d0d;
+  border-radius: 20px;
+  position: absolute;
+  top: 329px;
+  left: 105px;
+}
+.cash__right__button span {
+  font-weight: 500;
+  font-size: 12px;
+  color: #ffffff;
+}
+.cash__close-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: -12px;
+  right: 10px;
+}
+.cash__bed {
+  margin-bottom: 20px;
+}
