@@ -1,22 +1,9 @@
 import Cash from "../components/Cash";
 import EditProfile from "../components/EditProfile";
+import EditProfileMob from "../components/EditProfileMob";
 
 function Test() {
-  return (
-    <div
-      style={{
-        backgroundColor: "grey",
-        height: "100vh",
-        display: "flex",
-        gap: "100px",
-        flexWrap: "wrap",
-        padding: 10,
-      }}
-    >
-      <Cash />
-      <EditProfile />
-    </div>
-  );
+  return <EditProfileMob />;
 }
 
 export default Test;
