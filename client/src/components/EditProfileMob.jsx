@@ -26,22 +26,22 @@ function EditProfileMob() {
                             <div className="edit-profile__down__info__data">
                                 <input className="edit-profile__down__info__data__standart edit-profile__data__medium" placeholder="8 (999) 999-99-99"/>
                             </div>
-                        </div>
-                        <div className="edit-profile__down__info__medium">
-                            <div className="edit-profile__down__info__data edit-profile__data__small">
+                            <div className="edit-profile__down__info__data">
                                 <input className="edit-profile__down__info__data__medium" placeholder="ИНН"/>
                             </div>
-                            <div className="edit-profile__down__info__data edit-profile__data__small">
+                            <div className="edit-profile__down__info__data">
                                 <input className="edit-profile__down__info__data__medium" placeholder="БИК"/>
                             </div>
+                            <div className="edit-profile__down__info__data">
+                                <input className="edit-profile__down__info__data__medium" placeholder="Р.счет"/>
+                            </div>
+                            <div className="edit-profile__down__profile__face">
+                                <span>Перейти на Физ. Лицо</span>
+                            </div>
                         </div>
-                        <div className="edit-profile__down__info__data edit-profile__data">
-                            <input className="edit-profile__down__info__data__medium" placeholder="Р.счет"/>
-                        </div>
-                        <div className="edit-profile__down__profile__face">
-                            <span>Перейти на</span>
-                            <span>Физ. Лицо</span>
-                        </div>
+                    </div>
+                    <div className="edit-profile__up__button">
+                        <span>Подтвердить</span>
                     </div>
                 </div>
             </div>
