@@ -56,6 +56,20 @@
         height: 40px;
         margin-top: 10px;
     }
+    .edit-mob__grey::-webkit-input-placeholder  {
+        color: #C2C9CC;
+        font-weight: 500;
+        font-size: 16px; 
+    }
+    .edit-mob__grey__main::-webkit-input-placeholder  {
+        font-weight: 600;
+        font-size: 20px;
+        color:#C2C9CC;
+    }
+    .edit-profile__up__button span {
+        font-weight: 500;
+        font-size: 12px;
+    }
 
 
 }

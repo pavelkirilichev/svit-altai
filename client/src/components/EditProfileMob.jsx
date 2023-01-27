@@ -40,32 +40,23 @@ function EditProfileMob() {
                             </div>
                         </div>
                     </div>
-                    <div className="edit-profile__up__button">
+                    <div className="edit-profile__up__button edit-profile-mob__button">
                         <span>Подтвердить</span>
                     </div>
                 </div>
             </div>
             <div className="edit-profile">
                 <div className="edit-profile__up">
-                    <div className="edit-profile__up__button ">
-                        <span>Назад</span>
-                    </div>
-                    <div className="edit-profile__up__button edit-profile__white-button">
-                        <span>Подтвердить</span>
-                    </div>
+                  <span>Назад</span>
                 </div>
                 <div className="edit-profile__down">
                     <div className="edit-profile__down__profile">
                         <img src="../images/edit-profile/photo_profile.svg"/>
-                        <div className="edit-profile__down__profile__face">
-                            <span>Перейти на</span>
-                            <span>Физ. Лицо</span>
-                        </div>
                     </div>
                     <div className="edit-profile__down__info">
                         <div className="edit-profile__down__info__up">
                             <div className="edit-profile__down__info__data">
-                                <input className="edit-profile__down__info__data__main edit-profile__plc-grey" placeholder="Наименование фирмы" disabled/>
+                                <input className="edit-mob__grey__main" placeholder="Наименование фирмы"/>
                             </div>
                             <div className="edit-profile__down__info__data">
                                 <input className="edit-profile__down__info__data__standart" placeholder="Фамилия Имя Отчество"/>
@@ -73,18 +64,22 @@ function EditProfileMob() {
                             <div className="edit-profile__down__info__data">
                                 <input className="edit-profile__down__info__data__standart edit-profile__data__medium" placeholder="8 (999) 999-99-99"/>
                             </div>
-                        </div>
-                        <div className="edit-profile__down__info__medium">
-                            <div className="edit-profile__down__info__data edit-profile__data__small">
-                                <input className="edit-profile__down__info__data__medium edit-profile__plc-grey" placeholder="ИНН" disabled/>
+                            <div className="edit-profile__down__info__data">
+                                <input className="edit-mob__grey" placeholder="ИНН"/>
                             </div>
-                            <div className="edit-profile__down__info__data edit-profile__data__small">
-                                <input className="edit-profile__down__info__data__medium edit-profile__plc-grey" placeholder="БИК" disabled/>
+                            <div className="edit-profile__down__info__data">
+                                <input className="edit-mob__grey" placeholder="БИК"/>
+                            </div>
+                            <div className="edit-profile__down__info__data">
+                                <input className="edit-mob__grey" placeholder="Р.счет"/>
+                            </div>
+                            <div className="edit-profile__down__profile__face">
+                                <span>Перейти на ЮР. Лицо</span>
                             </div>
                         </div>
-                        <div className="edit-profile__down__info__data edit-profile__data">
-                            <input className="edit-profile__down__info__data__medium edit-profile__plc-grey" placeholder="Р.счет" disabled/>
-                        </div>
+                    </div>
+                    <div className="edit-profile__up__button">
+                        <span>Подтвердить</span>
                     </div>
                 </div>
             </div>
