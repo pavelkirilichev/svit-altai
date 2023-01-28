@@ -4,6 +4,7 @@ import Orders from "../components/Orders";
 import { useState } from "react";
 import FooterMob from "../components/FooterMob";
 import PersonalData from "../components/PersonalData";
+import PersonalData2 from "../components/PersonalData2";
 
 const goods = [
 	{
@@ -40,7 +41,7 @@ function Cart() {
 	let chapterMain = <Orders />;
 
 	if (chapter == "personal") {
-		chapterMain = <PersonalData />;
+		chapterMain = <PersonalData2 />;
 	}
 	return (
 		<div className='wrapper'>
