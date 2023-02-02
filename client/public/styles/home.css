@@ -141,11 +141,13 @@ a {
 	width: 55px;
 	font-weight: 600;
 	font-size: 20px;
-	color: #f20d0d;
+	color: #545454;
 }
+
 .home__goods__item__bottom img {
 	cursor: pointer;
 }
+
 .home__view-all {
 	cursor: pointer;
 	margin: 21px auto;
