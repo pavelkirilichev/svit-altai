@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function Test2() {
 	return (
 		<div style={{ display: "flex", flexDirection: "column", gap: 50 }}>
@@ -129,6 +130,12 @@ function Test2() {
 			</div>
 		</div>
 	);
+=======
+import PersonalDataMob from "../components/PersonalDataMob";
+
+function Test2() {
+  return <PersonalDataMob />;
+>>>>>>> f68acfb93df22ce1e0e354e88c239b5a344177d6
 }
 
 export default Test2;
