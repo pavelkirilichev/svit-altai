@@ -88,7 +88,7 @@
 }
 .personalData__information__subtitle {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 3px;
 }
 .personalData__information__main {

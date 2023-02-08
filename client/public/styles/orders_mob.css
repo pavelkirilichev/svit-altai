@@ -1,0 +1,185 @@
+.orders-mob {
+  box-sizing: border-box;
+  padding: 0 16px;
+  width: 100%;
+  height: 1025px;
+  background: #f2f4f5;
+  display: flex;
+  flex-direction: column;
+}
+.orders-mob__current {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 43px;
+}
+.orders-mob__current button:nth-child(1) {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f20d0d;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #ffffff;
+  height: 40px;
+  width: 47%;
+}
+.orders-mob__current button:nth-child(2) {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  color: #545454;
+  height: 40px;
+  width: 47%;
+  background: #ffffff;
+  border-radius: 20px;
+}
+.ordrer-mob__info__data {
+  font-weight: 600;
+  font-size: 20px;
+}
+.ordrer-mob__info__standart {
+  font-weight: 400;
+  font-size: 14px;
+}
+.ordrer-mob__info__medium {
+  font-weight: 400;
+  font-size: 12px;
+}
+.orders-mob__info {
+  display: flex;
+  gap: 12px;
+}
+.orders-mob__booking {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  height: 260px;
+  background: #ffffff;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+}
+.orders-mob__booking__title {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  justify-content: center;
+  gap: 3px;
+}
+
+.orders-mob__booking__title span {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: #545454;
+}
+.orders-mob__booking__title span:nth-child(2) {
+  color: #f20d0d;
+}
+.orders-mob__booking__parametrs {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.orders-mob__buttons {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.orders-mob__buttons button:nth-child(1) {
+  box-sizing: border-box;
+  padding: 12.5px 18.5px 12.5px 18.5px;
+  height: 40px;
+  width: 70%;
+  border: 1.5px solid #f2f4f5;
+  border-radius: 20px;
+  letter-spacing: 0.01em;
+  color: #f20d0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+}
+.orders-mob__buttons button:nth-child(2) {
+  height: 40px;
+  width: 26%;
+  background: #f20d0d;
+  border-radius: 20px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+}
+.orders-mob__buttons__direct {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #f20d0d;
+  border-radius: 20px;
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 12.5px 20px 12.5px 20px;
+}
+.orders-mob__buttons__direct span:nth-child(1) {
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: #545454;
+}
+.orders-mob__buttons__direct span:nth-child(2) {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: #545454;
+}
+.orders-mob__booking__number {
+  margin-top: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+@media (max-width: 364px) {
+  .orders-mob__buttons button:nth-child(1) {
+    box-sizing: border-box;
+    padding: 10.5px 16.5px 10.5px 16.5px;
+    height: 40px;
+    width: 70%;
+    border: 1.5px solid #f2f4f5;
+    border-radius: 20px;
+    letter-spacing: 0.01em;
+    color: #f20d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 10px;
+  }
+  .orders-mob__buttons button:nth-child(2) {
+    height: 40px;
+    width: 26%;
+    background: #f20d0d;
+    border-radius: 20px;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 10px;
+  }
+}
