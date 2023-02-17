@@ -1,0 +1,67 @@
+.personalData__mob {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 16.7447px;
+  letter-spacing: 0.01em;
+  color: #f20d0d;
+}
+.personalData__mob__left {
+  display: flex;
+  align-items: flex-start;
+}
+.personalData__mob__left_personal {
+  margin-left: 10px;
+}
+.personalData__mob__right {
+  margin-top: 12px;
+}
+.personalData__mob__right__main {
+  font-size: 12px;
+}
+.personalData__mob__right__medium {
+  font-size: 10px;
+}
+.personalData__mob__address {
+  font-size: 10px;
+  font-weight: 400;
+}
+.personalData__mob__address__main {
+  font-size: 12px;
+  font-weight: 500;
+}
+.personalData__mob__address__property {
+  display: flex;
+  flex-direction: column;
+}
+.personalData__mob__geo {
+  margin-top: -15px;
+  display: flex;
+  gap: 16px;
+}
+.personalData__mob__btn-edit {
+  margin: auto;
+  margin-top: 20px;
+  align-items: center;
+}
+.personalData__mob__entery {
+  width: 348px;
+  height: 190px;
+  background: #ffffff;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  margin-top: -10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+}
+.personalData__mob__entery__position {
+  box-sizing: border-box;
+  padding: 10px 0 10px 10px;
+  display: flex;
+  gap: 55px;
+}
+.personalData__mob__info__right {
+  margin-top: 10px;
+}

@@ -1,0 +1,139 @@
+.aboutMob__main {
+  min-height: calc(100vh - 103px);
+  flex-direction: column;
+  align-items: center;
+}
+.aboutMob__main-active {
+  display: none;
+}
+.aboutMob__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+}
+.aboutMob__head {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 180px;
+  background: #f20d0d;
+}
+
+.aboutMob__button-back {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+
+  font-weight: 500;
+  font-size: 16.7447px;
+  letter-spacing: 0.01em;
+  color: #f20d0d;
+}
+
+.aboutMob__head__content {
+  margin-top: 22px;
+  width: calc(100% - 9px);
+  margin-left: 9px;
+}
+.aboutMob__head__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+.aboutMob__head__title span {
+  margin-top: 2px;
+  display: block;
+  font-size: 24px;
+  line-height: 24px;
+}
+.aboutMob__head__title-bottom {
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+}
+.aboutMob__advantage {
+  width: 95%;
+  top: 215px;
+  flex-wrap: wrap;
+  gap: 10px 0;
+}
+.aboutMob__advantage__item {
+  box-sizing: border-box;
+  padding: 0 10px;
+  gap: 0;
+  padding-top: 16px;
+  width: 48.5%;
+  height: 100px;
+}
+.aboutMob__advantage__item img {
+  width: 24px;
+  height: 24px;
+}
+
+.aboutMob__advantage__discribe span {
+  font-size: 10px;
+  font-weight: 400;
+}
+.aboutMob__advantage__title {
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 400;
+}
+.aboutMob__advantage__down {
+  gap: 3px;
+}
+.aboutMob__description {
+  margin-top: 230px;
+  padding-bottom: 50px;
+}
+.aboutMob__description__item {
+  width: 100%;
+}
+.aboutMob__description__item__up {
+  gap: 30px;
+}
+
+@media (max-width: 365px) {
+  .aboutMob__advantage__discribe span {
+    font-weight: 8px;
+  }
+  .aboutMob__advantage__title {
+    font-size: 13px;
+  }
+  .aboutMob__advantage__item {
+    padding-top: 10px;
+  }
+  .aboutMob__advantage__item img {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+@media (max-width: 335px) {
+  .aboutMob__advantage__discribe span {
+    font-size: 10px;
+  }
+  .aboutMob__advantage__title {
+    font-size: 11px;
+  }
+  .aboutMob__advantage__title {
+    margin-top: 3px;
+  }
+  .aboutMob__advantage__item img {
+    width: 20px;
+    height: 20px;
+  }
+  .aboutMob__head__title-bottom {
+    font-size: 10px;
+  }
+}

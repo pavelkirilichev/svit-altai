@@ -1,0 +1,91 @@
+.md-mob {
+  width: 100%;
+  height: 600px;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 15.11px 20px 0px 20px;
+}
+.md-mob__button {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 20px;
+  position: absolute;
+}
+.md-mob__title {
+  font-weight: 500;
+  font-size: 16px;
+  color: #545454;
+}
+.md-mob__cart {
+  margin-top: 13.3px;
+  width: 100%;
+  height: 260px;
+  border: 1.5px solid #c2c9cc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 13px 10.58px 20px 10px;
+}
+.md-mob__cart__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.md-mob__cart__number {
+  font-weight: 600;
+  font-size: 20px;
+  color: #717171;
+}
+.md-mob__cart__img {
+  width: 60px;
+  height: 60px;
+  background: url(../images/md-mob/imgaine.png);
+  border: 1px solid #f2f4f5;
+  border-radius: 5px;
+}
+.md-mob__cart__name {
+  display: flex;
+  flex-direction: column;
+}
+.md-mob__cart__name span {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: #545454;
+}
+.md-mob__cart__parametrs {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 19px;
+}
+.md-mob__cart__characteristic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.md-mob__cart__characteristic span:nth-child(1) {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #545454;
+}
+.md-mob__cart__characteristic span:nth-child(2) {
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: #f20d0d;
+}
+.md-mob__cart__line {
+  width: 100%;
+  height: 0px;
+  border: 1px solid #c2c9cc;
+}
