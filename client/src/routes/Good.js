@@ -272,7 +272,7 @@ function Good() {
 						})}
 					</div>
 				</div>
-				<GoodMobile />
+				<GoodMobile goodCount={goodCount} setGoodCount={setGoodCount} />
 			</div>
 			<Footer />
 			<FooterMob cartPrice={212000} />

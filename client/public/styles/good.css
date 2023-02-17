@@ -376,7 +376,7 @@
 		background: #fff;
 	}
 }
-@media (max-width: 1024px) {
+@media (max-width: 1150px) {
 	.good__main__image {
 		padding: 11px 10px 0 10px;
 	}
@@ -395,6 +395,10 @@
 	}
 	.good__reviews__title {
 		margin-left: 0;
+	}
+	.good__main__down__head {
+		gap: 10px;
+		justify-content: space-between;
 	}
 }
 @media (max-width: 1015px) {
