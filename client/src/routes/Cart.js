@@ -5,6 +5,7 @@ import { useState } from "react";
 import FooterMob from "../components/FooterMob";
 import PersonalData from "../components/PersonalData";
 import PersonalData2 from "../components/PersonalData2";
+import CartMob from "../components/CartMob";
 
 const goods = [
   {
@@ -57,6 +58,7 @@ function Cart() {
           pull == "" && pullMenuMob == "" ? "cart__main-active" : "cart__main"
         }
       >
+        <CartMob />
         <div className="cart__container">
           <div className="cart__row">
             <div className="cart__row__sidebar">
