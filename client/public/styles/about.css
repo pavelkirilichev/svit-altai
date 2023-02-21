@@ -43,6 +43,7 @@
   color: #ffffff;
 }
 .about__advantage {
+  z-index: 1;
   width: calc(100% - 40px);
   position: absolute;
   top: 350px;
@@ -164,7 +165,7 @@
 }
 
 @media (max-width: 1015px) {
-  .about {
+  .about-active {
     display: none;
   }
   .aboutMob__main {

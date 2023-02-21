@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FooterMob from "../components/FooterMob";
+import MakeOrderMob from "../components/MakeOrderMob";
 import { useCallback, useState } from "react";
 
 function MakeOrder() {
@@ -328,8 +329,19 @@ function MakeOrder() {
 
   return (
     <div className="wrapper">
-      <Header cartPrice={2120} pull={pull} setPull={setPull} pullMenuMob={pullMenuMob} setPullMenuMob={setPullMenuMob}/>
-      <div className={(pull == "" && pullMenuMob == "") ? "mo__section-active" : "mo__section"}>
+      <Header
+        cartPrice={2120}
+        pull={pull}
+        setPull={setPull}
+        pullMenuMob={pullMenuMob}
+        setPullMenuMob={setPullMenuMob}
+      />
+      <div
+        className={
+          pull == "" && pullMenuMob == "" ? "mo__section-active" : "mo__section"
+        }
+      >
+        <MakeOrderMob />
         <div className="mo__main">
           <div className="mo__header">
             <span className="mo__name__header">Оформление заказа</span>

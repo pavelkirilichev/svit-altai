@@ -438,7 +438,7 @@ ul {
     min-height: 100%;
   }
   .cart__main-active {
-    margin-top: -0;
+    margin-top: 25px;
     min-height: calc(100vh - 130px);
   }
 }

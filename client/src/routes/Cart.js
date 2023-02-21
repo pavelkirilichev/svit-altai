@@ -5,6 +5,7 @@ import { useState } from "react";
 import FooterMob from "../components/FooterMob";
 import PersonalData from "../components/PersonalData";
 import PersonalData2 from "../components/PersonalData2";
+import EditProfile from "../components/EditProfile";
 import CartMob from "../components/CartMob";
 
 const goods = [
@@ -42,7 +43,10 @@ function Cart() {
   let chapterMain = <Orders />;
 
   if (chapter == "personal") {
-    chapterMain = <PersonalData2 />;
+    chapterMain = <PersonalData setChapter={setChapter} />;
+  }
+  if (chapter == "edit") {
+    chapterMain = <EditProfile />;
   }
   return (
     <div className="wrapper">
@@ -135,10 +139,13 @@ function Cart() {
                     setChapter("personal");
                   }}
                   style={{
-                    backgroundColor: chapter == "personal" ? "#F20D0D" : "#fff",
+                    backgroundColor:
+                      chapter == "personal" || chapter == "edit"
+                        ? "#F20D0D"
+                        : "#fff",
                   }}
                 >
-                  {chapter == "personal" ? (
+                  {chapter == "personal" || chapter == "edit" ? (
                     <img
                       src="../images/cart/user_circle.svg"
                       style={{ marginLeft: 10 }}
@@ -152,7 +159,10 @@ function Cart() {
                     <span
                       className="cart__menu__item__title"
                       style={{
-                        color: chapter == "personal" ? "#fff" : "#545454",
+                        color:
+                          chapter == "personal" || chapter == "edit"
+                            ? "#fff"
+                            : "#545454",
                       }}
                     >
                       Личные данные
@@ -160,7 +170,10 @@ function Cart() {
                     <span
                       className="cart__menu__item__subtitle"
                       style={{
-                        color: chapter == "personal" ? "#fff" : "#545454",
+                        color:
+                          chapter == "personal" || chapter == "edit"
+                            ? "#fff"
+                            : "#545454",
                       }}
                     >
                       сменить пароль

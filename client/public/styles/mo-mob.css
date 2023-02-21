@@ -1,112 +1,115 @@
 .mo-mob__main {
-	box-sizing: border-box;
-	width: 100%;
-	padding: 0 10px;
-	background: #f2f4f5;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 10px;
+  background: #f2f4f5;
 }
 .mo-mob__form {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .mo-mob__form__item {
-	width: 100%;
+  width: 100%;
 }
 .mo-mob__form__item input {
-	background-color: #fff;
-	width: 100%;
+  background-color: #fff;
+  width: 100%;
 }
 .mo-mob__container-btn {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	gap: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
 }
 .mo-mob__btn {
-	width: 48%;
+  width: 48%;
 }
 .mo-mob__delivery_image {
-	width: 40%;
+  width: 40%;
 }
 .mo-mob__geo {
-	justify-content: space-between;
-	width: 100%;
-	gap: 30px;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
 }
 .mo-mob__delivery {
-	width: 100%;
+  width: 100%;
 }
 .mo-mob__payment__methods {
-	width: 100%;
+  width: 100%;
 }
 .mo-mob__content {
-	height: auto;
-	background: #f2f4f5;
+  margin-top: 30px;
+  box-shadow: none;
+  padding: 0;
+  height: auto;
+  background: #f2f4f5;
 }
 .mo-mob__stage {
-	display: flex;
-	gap: 12px;
+  display: flex;
+  gap: 12px;
 }
 .mo-mob__geo__btn {
-	width: 100%;
+  width: 100%;
 }
 .mo-mob__header__title {
-	padding-bottom: 13px;
-	border-bottom: 1px solid #545454;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #545454;
 }
 .mo-mob__header__title span {
-	font-weight: 500;
-	font-size: 24px;
-	line-height: 140%;
-	color: #545454;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  color: #545454;
 }
 .mo-mob__header__info {
-	margin-top: 20px;
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .mo-mob__header__row {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .mo-mob__header__row__up {
-	align-items: flex-start;
+  align-items: flex-start;
 }
 .mo-mob__header__row__down {
-	align-items: flex-end;
+  align-items: flex-end;
 }
 .mo-mob__header__result {
-	display: flex;
-	align-items: center;
-	gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .mo-mob__header__result__title {
-	font-weight: 500;
-	font-size: 12px;
-	line-height: 15px;
-	letter-spacing: 0.01em;
-	color: #545454;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.01em;
+  color: #545454;
 }
 .mo-mob__header__result__subtitle {
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 19.5px;
-	letter-spacing: 0.01em;
-	color: #f20d0d;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.5px;
+  letter-spacing: 0.01em;
+  color: #f20d0d;
 }
 .mo-mob__btn-cancel {
-	height: 36px;
+  height: 36px;
 }
 .mo-mob__time {
-	gap: 6px;
+  gap: 6px;
 }
 .mo-mob__time__title {
-	color: #c2c9cc;
+  color: #c2c9cc;
 }
 .mo-mob__time__subtitle {
-	color: #545454 !important;
+  color: #545454 !important;
 }
 .mo-mob__geo__position {
-	gap: 0;
-	justify-content: space-between;
+  gap: 0;
+  justify-content: space-between;
 }
