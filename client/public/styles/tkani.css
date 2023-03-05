@@ -338,9 +338,9 @@
     display: none;
   }
   .tkani__main_section {
-    min-height: calc(100vh - 233px);
+    min-height: calc(100vh - 160px);
   }
   .tkani__main_section-active {
-    margin-top: -20px;
+    margin-top: 0;
   }
 }

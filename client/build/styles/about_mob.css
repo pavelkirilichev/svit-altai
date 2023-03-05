@@ -1,4 +1,5 @@
 .aboutMob__main {
+  margin-top: 53px;
   min-height: calc(100vh - 103px);
   flex-direction: column;
   align-items: center;
@@ -104,14 +105,11 @@
 }
 
 @media (max-width: 365px) {
-  .aboutMob__advantage__discribe span {
-    font-weight: 8px;
-  }
   .aboutMob__advantage__title {
     font-size: 13px;
   }
   .aboutMob__advantage__item {
-    padding-top: 10px;
+    padding-top: 6px;
   }
   .aboutMob__advantage__item img {
     width: 21px;

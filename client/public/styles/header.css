@@ -420,7 +420,7 @@
 .nav-mobile__search {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: right;
   width: 60%;
   height: 40px;
   background: #f2f4f5;

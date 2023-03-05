@@ -12,15 +12,14 @@ function FooterMob({ cartPrice }) {
       <div className="footer_mob__menu">
         <span>меню</span>
       </div>
-      <div className="footer_mob__cart">
-      <img
-          src="./images/header/cart.svg"
-        />
-        <span className="nav-bottom__cart-price footer_mob__price">
-          {cartPrice}₽
-        </span>
-      </div>
-      
+      <Link to="/cart">
+        <div className="footer_mob__cart">
+          <img src="./images/header/cart.svg" />
+          <span className="nav-bottom__cart-price footer_mob__price">
+            {cartPrice}₽
+          </span>
+        </div>
+      </Link>
     </div>
   );
 }

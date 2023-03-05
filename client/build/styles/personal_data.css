@@ -119,6 +119,7 @@
   color: #545454;
 }
 .personalData_entery {
+  margin-top: 0;
   display: flex;
   gap: 6px;
   width: 406px;

@@ -183,5 +183,6 @@
   }
   .good__main-section-active {
     margin-top: 25px;
+    min-height: calc(100vh - 75px);
   }
 }

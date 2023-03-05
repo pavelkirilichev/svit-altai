@@ -6,17 +6,14 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  width: 620px;
-  height: 380px;
+  width: 100%;
   background: #ffffff;
-  border-radius: 10px;
   box-sizing: border-box;
-  padding: 20px 20px 19px 20px;
 }
 .edit-profile__up {
   display: flex;
   align-items: center;
-  gap: 252px;
+  justify-content: space-between;
 }
 .edit-profile__up__button {
   width: 160px;
@@ -42,7 +39,6 @@
 }
 .edit-profile__down {
   display: flex;
-  align-items: center;
   gap: 10px;
 }
 .edit-profile__down__profile {

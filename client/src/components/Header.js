@@ -182,7 +182,10 @@ function Header({
         }}
       >
         <nav className="nav-mobile">
-          <img src="./images/header/logo_mobile.svg" />
+          <Link to="/">
+            <img src="./images/header/logo_mobile.svg" />
+          </Link>
+
           <div className="nav-mobile__search">
             <img
               src="./images/header/search.png"

@@ -1,7 +1,14 @@
+import { useNavigate } from "react-router-dom";
 function HomeMob() {
+  const navigate = useNavigate();
   return (
     <div className="home-mob__goods__list">
-      <div className="home__goods__item home-mob__goods__item">
+      <div
+        className="home__goods__item home-mob__goods__item"
+        onClick={() => {
+          navigate("/good");
+        }}
+      >
         <div className="home-mob__goods__item__image"></div>
         <p className="home__goods__item__info__title home-mob__goods__item__info__title">
           Подушка “Memory Foam Roller”{" "}
@@ -16,7 +23,12 @@ function HomeMob() {
           <img src="../images/good/cart_mob.svg" />
         </div>
       </div>
-      <div className="home__goods__item home-mob__goods__item">
+      <div
+        className="home__goods__item home-mob__goods__item"
+        onClick={() => {
+          navigate("/good");
+        }}
+      >
         <div className="home-mob__goods__item__image"></div>
         <p className="home__goods__item__info__title home-mob__goods__item__info__title">
           Подушка “Memory Foam Roller”{" "}
@@ -41,7 +53,12 @@ function HomeMob() {
           </div>
         </div>
       </div>
-      <div className="home__goods__item home-mob__goods__item">
+      <div
+        className="home__goods__item home-mob__goods__item"
+        onClick={() => {
+          navigate("/good");
+        }}
+      >
         <div className="home-mob__goods__item__image"></div>
         <p className="home__goods__item__info__title home-mob__goods__item__info__title">
           Подушка “Memory Foam Roller”{" "}
@@ -56,7 +73,12 @@ function HomeMob() {
           <img src="../images/good/cart_mob.svg" />
         </div>
       </div>
-      <div className="home__goods__item home-mob__goods__item">
+      <div
+        className="home__goods__item home-mob__goods__item"
+        onClick={() => {
+          navigate("/good");
+        }}
+      >
         <div className="home-mob__goods__item__image"></div>
         <p className="home__goods__item__info__title home-mob__goods__item__info__title">
           Подушка “Memory Foam Roller”{" "}
